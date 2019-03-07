@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/mobile/m_botchat.css" />
+    <link rel="stylesheet" href="assets/css/mobile/m_style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/mobile/m_ui.js"></script>
+    <title>TaihoChatBotv4</title>
+</head>
+<body>
+    <input type="hidden" id="conversationId">
+    
+    <!--<input type="hidden" id="cjworld_id_get" value="g1USFCLOzaxOXvfee/4yzvvuG1gyo4iW"/>-->
+    
+    <div class="mainBG">
+        <!-- 여기서 부터 -->
+        <div class="bot-wrap chatOn">
+            <div id="bot" />
+            <script src="assets/js/botchat.js"></script>
+            <script>
+                BotChat.App({
+                    directLine: {
+                        secret: 'DaL8yJX-9dQ.a7sAYrmH71hQF0drR4PDyGdEKWzq7n5gC6CB_Xx8Vfs'   //TaihoChatBotV4
+                        //,domain: 'https://northamerica.directline.botframework.com/v3/directline'
+                    },
+                    user: { id: 'userid' },
+                    bot: { id: 'botid' },
+                    resize: 'detect'
+                }, document.getElementById("bot"));
+            </script>
+        </div>
+        <!-- 끝 -->
+    </div>
+</body>
+</html>

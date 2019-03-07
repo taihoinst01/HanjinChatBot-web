@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv=Content-Type>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style_err.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <title>비정상적인 경로로 접근하셨습니다.</title>
+    
+    <script>
+        $(function () {
+            if (isMobile()) {
+                $('#deviceBtn').add("<button type='button' class='btnClick' onclick='javascript:history.back(-1)'>이전 페이지</button>").appendTo("#deviceBtn");
+            } else {
+                $('#deviceBtn').add("<button type='button' class='btnClick' onclick='javascript:window.close()'>닫기</button>").appendTo("#deviceBtn");
+            }
+        });
+
+        function isMobile() {
+            var UserAgent = navigator.userAgent;
+
+            if (UserAgent.match(/iPhone|iPad|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<section class="service route">
+	<div class="wrap">
+		<h3>죄송합니다.<br>
+		비정상적인 경로로 접근하셨습니다.</h3>
+		<p>
+			비정상적인 접근으로 페이지 로딩에 실패하였습니다.<br>
+			정상적인 경로를 이용해 주세요.
+		</p>
+		<div id="deviceBtn"></div>
+	</div>
+</section>
+
+</body>
+</html>
+
