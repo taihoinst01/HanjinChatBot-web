@@ -18,7 +18,8 @@
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="assets/js/start.js"></script>
     <script type="text/javascript" src="assets/js/pc/ui.js"></script>
-    <title>TaihoChatBotv4</title>
+    <script type="text/javascript" src="assets/js/pc/autocompleteword.js"></script>
+    <title>HanjinChatBot</title>
 </head>
 <body>
     <input type="hidden" id="conversationId" />
