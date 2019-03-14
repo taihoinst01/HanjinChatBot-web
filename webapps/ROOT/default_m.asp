@@ -36,7 +36,8 @@
             <script>
                 BotChat.App({
                     directLine: {
-                        secret: 'DaL8yJX-9dQ.a7sAYrmH71hQF0drR4PDyGdEKWzq7n5gC6CB_Xx8Vfs'   //TaihoChatBotV4
+                        //secret: 'DaL8yJX-9dQ.a7sAYrmH71hQF0drR4PDyGdEKWzq7n5gC6CB_Xx8Vfs'   //TaihoChatBotV4
+                secret: 'yC13LslTYjY.aVEoGDPPuVrPDAbn0AcEUCx7yQDLWBvL0g3niiFIMi8'   //HanjinChatBot
                         //,domain: 'https://northamerica.directline.botframework.com/v3/directline'
                     },
                     user: { id: 'userid' },
