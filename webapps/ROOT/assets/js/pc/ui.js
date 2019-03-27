@@ -39,7 +39,8 @@ $(function () {
   
     //챗봇창 상단 생성
     $(".wc-header > span").add(
-        "<span class='chatTitle'></span>"
+        //"<span class='chatTitle'></span>"
+        "<span class='chatTitleText'>한진택배 ChatBot</span>"
     ).appendTo(".wc-header");
 
     //챗봇 SAP Btn 생성
@@ -51,14 +52,13 @@ $(function () {
     $(".wc-console > div").add(
         "<div class='menuBox off'>" +
             "<ul type='none'>" +
-            "<li class='menuSelectBtn'>총무</li>" +
-            "<li class='menuSelectBtn'>인사</li>" +
-            "<li class='menuSelectBtn'>재무</li>" +
-            "<li class='menuSelectBtn'>IT</li>" +
-            "<li class='menuSelectBtn'>법무</li>" +
-            "<li class='menuSelectBtn'>CSV</li>" +
-            "<li class='menuSelectBtn'>블로썸파크</li>" +
-            "<li class='menuSelectBtn'>하고싶은말</li>" +
+            "<li class='menuSelectBtn'>예약/접수</li>" +
+            "<li class='menuSelectBtn'>배송조회</li>" +
+            "<li class='menuSelectBtn'>집배송방문</li>" +
+            "<li class='menuSelectBtn'>운송료</li>" +
+            "<li class='menuSelectBtn'>불편사항</li>" +
+            "<li class='menuSelectBtn'>국제특성</li>" +
+            "<li class='menuSelectBtn'>기타</li>" +
             "</ul>" +
         "</div > ").appendTo(".wc-console");
 
@@ -108,7 +108,7 @@ $(function () {
     });
     //챗봇 MENU + SAP 버튼 동작
     $('.wc-menu > div').click(function () {
-        $('.wc-shellinput').attr('value', '').attr('placeholder', '용어검색은 " # " 을 눌러 질문하세요 →').val('').focus();
+        $('.wc-shellinput').attr('value', '').attr('placeholder', '메세지를 입력하세요').val('').focus();
 
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
             $('.wc-menu').tooltip('destroy'); //메뉴 선택시 tooptip삭제
@@ -157,7 +157,7 @@ $(function () {
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();
         if ($(this).hasClass('sendIcon')) {
-            $('.wc-shellinput').attr('placeholder', '용어검색은 " # " 을 눌러 질문하세요 →');
+            $('.wc-shellinput').attr('placeholder', '메세지를 입력하세요');
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
             $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
             $('.sapIcon-close').removeClass('sapIcon-close').addClass('menuIcon');

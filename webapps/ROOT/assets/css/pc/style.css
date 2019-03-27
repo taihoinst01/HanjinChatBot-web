@@ -7,7 +7,10 @@
 
 /* chat TOP */
 .chatTitle{background: url("../../image/chatbotStyle/topbar_title.png") no-repeat;background-size:300px 50px; height:50px;width:300px; display: inline-block;}
-.chatTitleText{font-size:13px;color:#FFF;}
+.chatTitleText {
+    font-size: 20px;
+    color: #FFF;
+}
 .topIcon01{background: url("../../image/chatbotStyle/btn_down.png") no-repeat;  width:14px;height:13px;display: inline-block;top: 14px; right: 58px;position: absolute} 
 .topIcon02{background: url("../../image/chatbotStyle/btn_fsize.png") no-repeat;  width:12px;height:12px;display: inline-block;top: 14px; right: 34px;position: absolute;}
 .topIcon02-1{background: url("../../image/chatbotStyle/btn_fsize_02.png") no-repeat;  width:12px;height:12px;display: inline-block;top: 14px; right: 34px;position: absolute;}
@@ -27,7 +30,10 @@
 .ac-container{padding:0 !important; max-width:312px;/*border-radius:5px; background-color:#F8FFFF !important*/}
 .ac-container > div {color:#555 !important}
 .ac-image{min-height:150px;}
-.wc-list > .wc-card{background-color:#fff !important;/*border-color:#F8FFFF !important*/ border:1px solid #555}
+.wc-list > .wc-card {
+    background-color: #fff !important; /*border-color:#F8FFFF !important*/
+    border: 1px solid #E6E6E6
+}
 .wc-carousel-item > .wc-card{background-color:#fff !important;max-width:200px; /*border-color:#F8FFFF !important;*/ border:1px solid #555}
 /*.wc-carousel-item > .wc-card > .ac-container{background-color:#F8FFFF !important}
 .wc-carousel-item > .wc-card > .ac-container > .ac-container{background-color:#F8FFFF !important}*/
@@ -60,7 +66,20 @@
 .menuIcon_active:hover{background: url("../../image/chatbotStyle/close03h.png") no-repeat 50% 50%;background-size:35px 35px; width:50px;height:50px;cursor:pointer} /*이미지용*/
 .menuReStartBtn{color:#fff;background-color:#326E9B;height:30px;font-size:12px}
 .menuReStartBtn > span {position:relative; top:7px}
-.menuSelectBtn{border-top:1px solid #f0f1f4;position:relative;width:20%;height:40px;display:inline-block;padding-top:10px;cursor:pointer;background-color:#3a3a3a;color:#fff;border-radius:15px;margin:5px 10px 10px 5px}
+/*.menuSelectBtn{border-top:1px solid #f0f1f4;position:relative;width:20%;height:40px;display:inline-block;padding-top:10px;cursor:pointer;background-color:#3a3a3a;color:#fff;border-radius:15px;margin:5px 10px 10px 5px}*/
+.menuSelectBtn {
+    border-top: 1px solid #f0f1f4;
+    position: relative;
+    width: 20%;
+    height: 40px;
+    display: inline-block;
+    padding-top: 10px;
+    cursor: pointer;
+    background-color: #A0E1F3;
+    color: #0B538E;
+    border-radius: 15px;
+    margin: 5px 10px 10px 5px
+}
 .menuSelectBtn > span {position:relative; top:4px}
 
 .ttsMicBlack{background: url("../../image/chatbotStyle/micBlack_50.png");width:50px;height:50px;position:absolute;bottom:0;right:60px;cursor:pointer}
