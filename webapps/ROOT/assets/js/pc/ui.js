@@ -27,16 +27,16 @@ $(function () {
     $('.wc-chatview-panel').css({ 'height': ($(document).height()) + 'px' });
     $(window).resize(function () {
         //$('#wrapper').css({ 'height': ($(document).height()) + 'px' });
-        $('.wc-carousel').css({ 'width': ($(document).width()-74) + 'px' });
+        $('.wc-carousel').css({ 'width': ($(document).width() - 74) + 'px' });
         $('.tooltip').tooltip('show');
     });
 
     $('.wc-shellinput').blur();
 
     //tooltip
-    $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement','top').attr('title','바로가기')
-    .attr('data-template','<div class="tooltip tool2" role="tooltip"><div class="tooltip-arrow arrow2"></div><div class="tooltip-inner"></div></div>').tooltip('show');
-  
+    $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement', 'top').attr('title', '바로가기')
+        .attr('data-template', '<div class="tooltip tool2" role="tooltip"><div class="tooltip-arrow arrow2"></div><div class="tooltip-inner"></div></div>').tooltip('show');
+
     //챗봇창 상단 생성
     $(".wc-header > span").add(
         //"<span class='chatTitle'></span>"
@@ -46,28 +46,29 @@ $(function () {
     //챗봇 SAP Btn 생성
     $(".wc-chatview-panel > div").add(
         "<div class='sapBtn off'>" +
-    "</div > ").appendTo(".wc-chatview-panel");
+        "</div > ").appendTo(".wc-chatview-panel");
 
     //챗봇 MENU BTN
     $(".wc-console > div").add(
         "<div class='menuBox off'>" +
-            "<ul type='none'>" +
-            "<li class='menuSelectBtn'>예약/접수</li>" +
-            "<li class='menuSelectBtn'>배송조회</li>" +
-            "<li class='menuSelectBtn'>집배송방문</li>" +
-            "<li class='menuSelectBtn'>운송료</li>" +
-            "<li class='menuSelectBtn'>불편사항</li>" +
-            "<li class='menuSelectBtn'>국제특성</li>" +
-            "<li class='menuSelectBtn'>기타</li>" +
-            "</ul>" +
+        "<ul type='none'>" +
+        "<li class='menuSelectBtn'>예약</li>" +
+        "<li class='menuSelectBtn'>반품예약</li>" +
+        "<li class='menuSelectBtn'>예약확인/취소</li>" +
+        "<li class='menuSelectBtn'>배송문의/li>" +
+        "<li class='menuSelectBtn'>견적의뢰</li>" +
+        "<li class='menuSelectBtn'>현금영수증</li>" +
+        "<li class='menuSelectBtn'>직원/집배점 연락처</li>" +
+        "<li class='menuSelectBtn'>고객의말씀</li>" +
+        "</ul>" +
         "</div > ").appendTo(".wc-console");
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     //챗봇 menu 선택
     $('.menuSelectBtn').click(function () {
         var v = $(this).html();
-        if(v == '하고싶은말'){v = '건의사항 입력';}
-        else{v = v + ' 선택';}
+        if (v == '하고싶은말') { v = '건의사항 입력'; }
+        else { v = v + ' 선택'; }
         $('div.wc-console').addClass('has-text');
         $('input[type="text"].wc-shellinput').attr('value', v).val(v);
         $('label.wc-send').trigger('click');
@@ -103,7 +104,7 @@ $(function () {
         $('.sapIcon').removeClass('sapIcon').addClass('sapIcon-search');
         $('.wc-sap').removeClass('off').addClass('on').css({ 'display': 'block' });
         $('.sapBtn').removeClass('off').addClass('on');
-        $('.wc-textbox').animate({ 'left': 50 + 'px' },'fast');
+        $('.wc-textbox').animate({ 'left': 50 + 'px' }, 'fast');
         $('.wc-message-groups').css({ 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
     //챗봇 MENU + SAP 버튼 동작
@@ -151,7 +152,7 @@ $(function () {
         }
     });
     $('.wc-shellinput').click(function () {
-        $('.wc-shellinput').css({'ime-mode':'active'}); //IE만 지원
+        $('.wc-shellinput').css({ 'ime-mode': 'active' }); //IE만 지원
         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
     $('.wc-send > div').click(function () {
