@@ -57,10 +57,14 @@
 /*.menuBox{background-color:#fff;width:100%;height:100px;position:fixed;bottom:10px;display:none;text-align:center; border-radius: 4px;}*/
 .menuBox{background-color:#fff;width:100%;position:absolute;top:55px;left:-25px;text-align:center;/*box-shadow: 0 1px 10px 0 rgba(0,0,0,0.30);border: 1px solid #CCC;*/ border-radius: 4px;display:none}
 
-.menuIcon{background: url("../../image/chatbotStyle/plus02.png") no-repeat 50% 50%;background-size:35px 35px; width:50px;height:50px;cursor:pointer} /*이미지용*/
-.menuIcon:hover{background: url("../../image/chatbotStyle/plus02h.png") no-repeat 50% 50%;background-size:35px 35px; width:50px;height:50px;cursor:pointer} /*이미지용*/
-.menuIcon_active{background: url("../../image/chatbotStyle/close03.png") no-repeat 50% 50%;background-size:35px 35px; width:50px;height:50px;cursor:pointer} /*이미지용*/
-.menuIcon_active:hover{background: url("../../image/chatbotStyle/close03h.png") no-repeat 50% 50%;background-size:35px 35px; width:50px;height:50px;cursor:pointer} /*이미지용*/
+.menuIcon{margin-top:5px; background: url("../../image/chatbotStyle/new/plus.png") no-repeat 50% 50%;background-size:40px 40px; width:50px;height:50px;cursor:pointer}
+/*
+.menuIcon:hover{background: url("../../image/chatbotStyle/plus02h.png") no-repeat 50% 50%;background-size:35px 35px; width:50px;height:50px;cursor:pointer}
+*/
+.menuIcon_active{background: url("../../image/chatbotStyle/new/close.png") no-repeat 50% 50%;background-size:40px 40px; width:50px;height:50px;cursor:pointer}
+/*
+.menuIcon_active:hover{background: url("../../image/chatbotStyle/close03h.png") no-repeat 50% 50%;background-size:35px 35px; width:50px;height:50px;cursor:pointer}
+*/
 .menuReStartBtn{color:#fff;background-color:#326E9B;height:30px;font-size:12px}
 .menuReStartBtn > span {position:relative; top:7px}
 /*.menuSelectBtn{border-top:1px solid #f0f1f4;position:relative;width:20%;height:40px;display:inline-block;padding-top:10px;cursor:pointer;background-color:#3a3a3a;color:#fff;border-radius:15px;margin:5px 10px 10px 5px}*/
