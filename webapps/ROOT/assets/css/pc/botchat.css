@@ -1,7 +1,7 @@
 /* reset */
 body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     /*font-family: "Nanum Gothic", sans-serif;*/
-    font-family: 'CJONLYONENEWbodyRegular'; /*KSO CJ font*/
+    font-family:'Malgun Gothic', '¸¼Àº °íµñ', Dotum, Gulim;
     font-size: 14px;
 }
 
@@ -24,7 +24,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     outline: none;
     transition: color .2s ease, background-color .2s ease;
     border-radius: 5px;
-    border: 1px solid #0F94B7;
+    border: 1px solid #3472c5;
 }
 
 .wc-app h1, .wc-app h2, .wc-app h3, .wc-app h4, .wc-app p, .wc-app ul, .wc-app ol {
@@ -45,7 +45,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   color: #ffffff;
       border-bottom:4px solid #ddd
   */
-    background-color: #3a96dd;
+    background-color: #3472c5;
     font-weight: 500;
     height: 50px;
     left: 0;
@@ -73,7 +73,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     right: 0;
     top: 50px;
     transition: transform 0.2s cubic-bezier(0, 0, 0.5, 1);
-    background-color: #E7E8EA;
+    background-color: #e6ecf3;
 }
   .wc-message-groups.no-header {
     top: 0; }
@@ -228,27 +228,30 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 
 /* cards */
 .wc-card {
+  margin-left:6px;
   background-color: #ffffff; 
-  border-radius:8px;
+  border-radius:0 8px 8px 8px;
 }
   .wc-card .non-adaptive-content {
     margin: 8px 8px 0 8px; }
     .wc-card button {
         /*background-color: transparent;
     color: #3a96dd;background-color: #3a3a3a;*/
-        color: #000;
+        color: #3472c5;
         min-height: 32px;
-        width: 95%;
+        width: 85%;
         padding: 0 16px;
-        margin-left: 7px;
-        margin-bottom: 5px;
+        margin: 0 auto 15px;
+        font-weight: bold;
+        /*background: url('../../image/chatbotStyle/new/ico_arrow.png') no-repeat 90% 40%;
+        background-size:19px 7px;*/
     }
         .wc-card button:hover {
             /*background-color: transparent;
     border-color: #3a96dd;*/
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
-            background-color: #0F94B7;
+            background-color:#0180a3;
             color: #fff;
         }
   .wc-card button:active {
@@ -401,12 +404,12 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   .wc-carousel li p {
     /*min-height: 4em;*/
     white-space: normal; }
-  .wc-carousel li .wc-adaptive-card p {
-    min-height: initial; }
+  .wc-carousel li .wc-adaptive-card p {min-height: initial;}
 
 /* from me */
 .wc-message-from-me {
   float: right;
+  max-width:70%;
   margin-right: 6px; }
 
 .wc-message-from-me.wc-message-from {
@@ -425,7 +428,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   right: -6px; }
 
 .wc-message-from-me .wc-message-content span{font-size:14px;color:#fff;line-height:15px;}
-.wc-message-from-me .wc-message-content span > span{display: block;padding:10px;border-radius:5px;border:1px solid #e0e0e0;background:#474745;color:#fff;/*box-shadow: 3px 3px 5px 0px #424242;*/}
+.wc-message-from-me .wc-message-content span > span{display: block;padding:15px;border-radius:8px 0 8px 8px;border:1px solid #e0e0e0;background:#393772;color:#fff;/*box-shadow: 3px 3px 5px 0px #424242;*/}
 
 /* from bot */
 .wc-message-from-bot {
@@ -452,8 +455,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 }*/
 .wc-message-from-bot div img.wc-message-callout {
   /*background: url("../../image/chatbotStyle/ico_profi_36.png") no-repeat;*/
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
   position: absolute;
   margin: 0 0 0 -40px
@@ -470,8 +473,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   display: inline-block;
   height: 50px;
   width: 50px;
-  background-color:#e0e0e0;
-  border-radius:20px
+  background-color:#9b9b9b;
+  border-radius:0;
 }
 
 .wc-console svg {
@@ -551,8 +554,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   transition: left .3s ease-in-out; }
 
 /* text formats */
-.format-markdown > p {
-  margin-bottom: 0px; }
+.format-markdown > p {margin-left:6px; margin-bottom:0px; border:1px solid #c0c0c0 !important; background:#fff; border-radius:0 8px 8px 8px !important;}
 
 .format-markdown code {
   white-space: pre-wrap; }
@@ -576,3 +578,15 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 
 .wc-app ::-webkit-scrollbar-thumb {
   background-color: #dbdee1; }
+
+/* Ä¿½ºÅÍ¸¶ÀÌÂ¡ Ãß°¡ - ÁøÁÖÈ£ */
+.wc-carousel-item .wc-card {border-radius:8px;}
+.wc-carousel-item .wc-card .ac-container > div:first-child > p:first-child {
+    color:#fff;
+    text-align:center;
+    border-radius:8px 8px 0 0;
+    background:#3472c5 url('../../image/chatbotStyle/new/ico_note.png') no-repeat 28px 13px;
+    background-size:22px 23px;
+}
+
+.menuBox ul {text-align:left;}

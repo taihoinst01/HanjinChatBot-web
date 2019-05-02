@@ -7798,7 +7798,7 @@ var deviceChk;
                         },
                         o.createElement("img", {
                             //src: "assets/image/chatbotStyle/ico_profi_80.png", className: "wc-message-callout"
-                            src: "assets/image/chatbotStyle/new/chatbot.png", className: "wc-message-callout"
+                            src: "assets/image/chatbotStyle/new/chatbot_hj.png", className: "wc-message-callout"
                         }
                         //    o.createElement("svg", {
                         //    className: "wc-message-callout"
@@ -8178,7 +8178,7 @@ var deviceChk;
                 messageFailed: "couldn't send",
                 messageSending: "sending",
                 timeSent: " at %1",
-                consolePlaceholder: '메세지를 입력하세요',
+                consolePlaceholder: '여기에 질문을 입력해 주세요.',
                 listeningIndicator: "Listening..."
             },
             ja: {
@@ -21032,7 +21032,7 @@ function appendLoadingDiv() {
             //+ '<path class="point-right" d="m6,6 l-6 6 v-12 z"></path>'
             //+ '</svg>'
             //+ '<img src="assets/image/chatbotStyle/ico_profi_80.png" class="wc-message-callout">'
-            + '<img src="assets/image/chatbotStyle/new/chatbot.png" class="wc-message-callout">'
+            + '<img src="assets/image/chatbotStyle/new/chatbot_hj.png" class="wc-message-callout">'
             + '<div>'
             + '<div class="format-markdown">'
             + '<p class="ac-container" style="border:1px solid #555;border-radius:7px"><img src="assets/image/chatbotStyle/loading.gif" style="width:80px;padding:10px" /></p>'

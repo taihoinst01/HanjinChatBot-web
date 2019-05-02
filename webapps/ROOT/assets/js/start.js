@@ -26,5 +26,5 @@ function isMobile() {
 }
 
 if (isMobile()) {   //모바일 환경
-    location.href = "default_m.asp";   
+    //location.href = "default_m.asp";   
 }
