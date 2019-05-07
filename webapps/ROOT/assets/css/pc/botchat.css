@@ -63,12 +63,12 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   margin-bottom: 10px; }
 
 .wc-message-groups {
-    bottom: 60px;
+    bottom: 0;
     left: 0;
     transform: translateY(0);
     overflow-x: hidden;
     overflow-y: scroll;
-    padding: 10px;
+    padding: 10px 10px 60px;
     position: absolute;
     right: 0;
     top: 50px;
@@ -144,12 +144,12 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 .wc-console {
   /*border: 5px solid #dbdee1;*/
   background-color:#fff;
-  bottom: 10px;
+  bottom: 0;
   box-sizing: border-box;
   height: 50px;
   left: 50px;
-  position: absolute;
-  right: 10px; 
+  position: fixed;
+  right: 0; 
   border-radius:0px }
 
 /* views */
@@ -507,7 +507,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 .wc-textbox {
   bottom: 0;
   /*left: 60px;*/
-  left: 30px;
+  left: 0;
   right: 50px; }
 
 .wc-send {

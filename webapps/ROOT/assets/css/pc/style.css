@@ -52,12 +52,12 @@
 .sendIcon{background: url("../../image/chatbotStyle/new/btn_send.png") no-repeat;background-size:28px 24px; width:28px;height:24px;margin:13px 10px}
 /* .sendIcon:hover{background: url("../../image/chatbotStyle/btn_send_h.png") no-repeat;background-size:35px 35px; width:35px;height:35px;margin:8px} */
 
-.wc-menu{display: inline-block;width:50px;height: 50px;margin-left:-50px}
+.wc-menu{display: inline-block;width:50px;height: 50px;margin-left:-50px; background:#fff;}
 /*origin*/
 /*.menuBox{background-color:#fff;width:100%;height:100px;position:fixed;bottom:10px;display:none;text-align:center; border-radius: 4px;}*/
 .menuBox{background-color:#fff;width:100%;position:absolute;top:55px;left:-25px;text-align:center;/*box-shadow: 0 1px 10px 0 rgba(0,0,0,0.30);border: 1px solid #CCC;*/ border-radius: 4px;display:none}
 
-.menuIcon{margin-top:5px; background: url("../../image/chatbotStyle/new/plus.png") no-repeat 50% 50%;background-size:40px 40px; width:50px;height:50px;cursor:pointer}
+.menuIcon{background: url("../../image/chatbotStyle/new/plus.png") no-repeat 50% 50%;background-size:40px 40px; width:50px;height:50px;cursor:pointer}
 /*
 .menuIcon:hover{background: url("../../image/chatbotStyle/plus02h.png") no-repeat 50% 50%;background-size:35px 35px; width:50px;height:50px;cursor:pointer}
 */
