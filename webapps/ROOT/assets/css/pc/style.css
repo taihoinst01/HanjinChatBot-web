@@ -114,6 +114,12 @@
 .tooltip-inner{background-color:#326E9B;padding:8px 3px}
 .tool2{left:-45px !important}
 
+/* 미디어 쿼리 분기 */
+@media (max-width:480px) {
+    .menuBox {top:50px;}
+    .menuSelectBtn {height:30px; margin-bottom:0; padding:7px 10px 0; font-size:13px;}
+}
+
 /* 반품택배예약 쪽 추가 - 진주호 */
 .takeBack {display:inline-block; width:calc(100% - 24px); margin:0 15px; padding:10px 12px; border:1px solid #c6c6c7; border-radius:4px;}
 .takeBack .endDate {display:inline-block; float:left; margin-right:15px;}
