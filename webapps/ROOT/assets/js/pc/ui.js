@@ -54,7 +54,8 @@ $(function () {
         "<ul type='none'>" +
         "<li class='menuSelectBtn'>예약</li>" +
         "<li class='menuSelectBtn'>반품예약</li>" +
-        "<li class='menuSelectBtn'>예약확인/취소</li>" +
+        "<li class='menuSelectBtn'>예약확인</li>" +
+        "<li class='menuSelectBtn'>예약취소</li>" +
         "<li class='menuSelectBtn'>배송문의</li>" +
         "<li class='menuSelectBtn'>견적의뢰</li>" +
         "<li class='menuSelectBtn'>현금영수증</li>" +
