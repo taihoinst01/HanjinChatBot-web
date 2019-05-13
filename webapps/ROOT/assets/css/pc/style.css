@@ -133,5 +133,4 @@
 .takeBack .prodInfo span.prodStatus {font-size:14px; color:#e61546;}
 
 /* 자동완성 레이어 팝업 위치 수정 - 진주호 */
-#ui-id-1 {
-left:0px !important;}
+#ui-id-1 {left:0 !important;}
