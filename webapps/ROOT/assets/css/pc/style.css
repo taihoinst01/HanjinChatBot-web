@@ -23,7 +23,7 @@
 /*.wc-list{background-color: #f1f3f6}*/
 .wc-card{margin-bottom:18px;/*box-shadow: 3px 3px 5px 0px #424242;*/}
 .timeStampBot{font-size: 12px; color: #a6a6ab;line-height: 15px; text-align: right; /*background: #f1f3f6;*/padding-top: 3px !important; position:absolute; bottom:-5px; right:0}
-.timeStampUser{position:absolute; bottom:0; left:-60px; font-size: 12px;color:#a6a6ab; line-height: 15px;text-align: right;padding-top:7px !important}
+.timeStampUser{position:absolute; bottom:0; left:-70px; font-size: 12px;color:#a6a6ab; line-height: 15px;text-align: right;padding-top:7px !important}
 .ac-container{padding:0 !important; max-width:312px;/*border-radius:5px; background-color:#F8FFFF !important*/}
 .ac-container > div {color:#666 !important}
 .ac-image{min-height:150px;}
@@ -131,3 +131,7 @@
 .takeBack .prodInfo span.prodName {margin-bottom:5px; font-size:15px; color:#333;}
 .takeBack .prodInfo span.prodNum {margin-bottom:5px; font-size:14px; color:#333;}
 .takeBack .prodInfo span.prodStatus {font-size:14px; color:#e61546;}
+
+/* 자동완성 레이어 팝업 위치 수정 - 진주호 */
+#ui-id-1 {
+left:0px !important;}

@@ -63,6 +63,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   margin-bottom: 10px; }
 
 .wc-message-groups {
+    display:inline-block;
     bottom: 0;
     left: 0;
     transform: translateY(0);
