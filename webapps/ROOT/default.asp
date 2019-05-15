@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-    <meta name="viewport" content="width=380" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <!-- meta name="viewport" content="width=380" / -->
 
     <link rel="stylesheet" href="assets/css/jquery-ui.css" />
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css" />
