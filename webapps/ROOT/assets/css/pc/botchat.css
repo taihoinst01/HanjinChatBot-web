@@ -587,8 +587,12 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     color:#fff;
     text-align:center;
     border-radius:8px 8px 0 0;
-    background:#3472c5 url('../../image/chatbotStyle/new/ico_note.png') no-repeat 28px 13px;
-    background-size:22px 23px;
+    background-color:#3472c5
+}
+.wc-carousel-item .wc-card #wIcon01 {
+    padding-left:22px;
+    background:url('../../image/chatbotStyle/new/ico_note.png') no-repeat 0 0;
+    background-size:18px 19px;
 }
 
 .menuBox ul {text-align:left;}

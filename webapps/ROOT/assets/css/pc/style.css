@@ -28,7 +28,7 @@
 .ac-container > div {color:#666 !important}
 .ac-image{min-height:150px;}
 .wc-list > .wc-card {
-    width:98%; /* ipone6 대응 */
+    width:98%; /* iphone6 대응 */
     background-color: #fff !important; /*border-color:#F8FFFF !important*/
     border: 1px solid #c0c0c0;
 }
