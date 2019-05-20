@@ -581,7 +581,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 .wc-app ::-webkit-scrollbar-thumb {
   background-color: #dbdee1; }
 
-/* 커스터마이징 추가 - 진주호 */
+/* 커스터마이징 아이콘 추가 - 진주호 */
 .wc-carousel-item .wc-card {border-radius:8px;}
 .wc-carousel-item .wc-card .ac-container > div:first-child > p:first-child {
     color:#fff;
@@ -591,8 +591,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 }
 .wc-carousel-item .wc-card #wIcon01 {
     padding-left:22px;
-    background:url('../../image/chatbotStyle/new/ico_note.png') no-repeat 0 0;
-    background-size:18px 19px;
+    background:url('../../image/chatbotStyle/new/ico_note01.png') no-repeat 0 0;
+    background-size:17px auto;
 }
 
 .menuBox ul {text-align:left;}
