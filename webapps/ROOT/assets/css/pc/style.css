@@ -36,7 +36,7 @@
 /*.wc-carousel-item > .wc-card > .ac-container{background-color:#F8FFFF !important}
 .wc-carousel-item > .wc-card > .ac-container > .ac-container{background-color:#F8FFFF !important}*/
 .wc-carousel-item > .wc-adaptive-card{max-width:200px}
-.ac-container > div > p {padding:15px !important; font-size:14px;}
+.ac-container > div > p {padding:7px 15px !important; font-size:14px;}
 .ac-container > div > ol {padding:10px !important}
 .ac-container > div > ul {padding:10px !important}
 

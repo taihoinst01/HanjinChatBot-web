@@ -592,7 +592,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 .wc-carousel-item .wc-card #wIcon01 {
     display:inline-block;
     height:24px;
-    padding-left:26px;
+    padding:1px 0 0 26px;
     background:url('../../image/chatbotStyle/new/ico_note01.png') no-repeat 0 0;
     background-size:20px auto;
 }
