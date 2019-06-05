@@ -53,7 +53,7 @@ $(function () {
         "<div class='menuBox off'>" +
         "<ul type='none'>" +
         "<li class='menuSelectBtn'>예약</li>" +
-        "<li class='menuSelectBtn'>반품예약</li>" +
+        "<li class='menuSelectBtn'>반품택배예약</li>" +
         "<li class='menuSelectBtn'>예약확인</li>" +
         "<li class='menuSelectBtn'>예약취소</li>" +
         "<li class='menuSelectBtn'>배송문의</li>" +
@@ -69,7 +69,8 @@ $(function () {
     $('.menuSelectBtn').click(function () {
         var v = $(this).html();
         if (v == '하고싶은말') { v = '건의사항 입력'; }
-        else { v = v + ' 선택'; }
+        //else { v = v + ' 선택'; }
+        else { v = v + ' '; }
         $('div.wc-console').addClass('has-text');
         $('input[type="text"].wc-shellinput').attr('value', v).val(v);
         $('label.wc-send').trigger('click');

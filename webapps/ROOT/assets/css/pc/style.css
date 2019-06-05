@@ -113,7 +113,13 @@
 .tooltip{font-family:'CJONLYONENEWbodyRegular'}
 .tooltip.top .tooltip-arrow{border-top-color:#326E9B}
 .tooltip-inner{background-color:#326E9B;padding:8px 3px}
-.tool2{left:-45px !important}
+.tool2 {
+    left: -47px !important
+}
+
+.tool2 {
+    top: -25px !important
+}
 
 /* 미디어 쿼리 분기 */
 @media (max-width:480px) {
