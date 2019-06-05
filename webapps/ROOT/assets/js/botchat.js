@@ -6919,7 +6919,8 @@ var deviceChk;
                 separation: {
                     spacing: 8
                 },
-                buttonSpacing: 8,
+                //buttonSpacing: 8,
+                buttonSpacing: 0,
                 stretch: !1,
                 showCard: {
                     actionMode: "inlineEdgeToEdge",

@@ -243,7 +243,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
         min-height: 32px;
         width: 85%;
         padding: 0 16px;
-        margin: 0 auto 15px;
+        margin: 0 auto 8px;
         font-weight: bold;
         /*background: url('../../image/chatbotStyle/new/ico_arrow.png') no-repeat 90% 40%;
         background-size:19px 7px;*/
@@ -583,19 +583,91 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 
 /* 커스터마이징 아이콘 추가 - 진주호 */
 .wc-carousel-item .wc-card {border-radius:8px;}
-.wc-carousel-item .wc-card .ac-container > div:first-child > p:first-child {
-    color:#fff;
-    text-align:center;
-    border-radius:8px 8px 0 0;
-    background-color:#3472c5
-}
-.wc-carousel-item .wc-card #wIcon01 {
+    .wc-carousel-item .wc-card .ac-container > div:first-child > p:first-child {
+        color: #fff;
+        /*text-align:center;*/
+        border-radius: 8px 8px 0 0;
+        background-color: #3472c5
+    }
+    .wc-carousel-item .wc-card #wIcon01 {
+        display: inline-block;
+        height: 24px;
+        padding: 1px 0 0 30px;
+        background: url('../../image/chatbotStyle/new/ico_note01.png')  no-repeat 0 0;
+        background-size: 22px auto;
+        vertical-align: middle;
+    }
 
-    display:inline-block;
-    height:24px;
-    padding:1px 0 0 26px;
-    background:url('../../image/chatbotStyle/new/ico_note01.png') no-repeat 0 0;
-    background-size:20px auto;
-}
+    .wc-carousel-item .wc-card #wIcon02 {
+        display: inline-block;
+        height: 24px;
+        padding: 1px 0 0 30px;
+        background: url('../../image/chatbotStyle/new/ico_note02.png') no-repeat 0 0;
+        background-size: 22px auto;
+        vertical-align: middle;
+    }
+
+    .wc-carousel-item .wc-card #wIcon03 {
+        display: inline-block;
+        height: 24px;
+        padding: 1px 0 0 40px;
+        background: url('../../image/chatbotStyle/new/ico_note03.png') no-repeat 0 0;
+        background-size: 30px auto;
+        vertical-align: middle;
+    }
+
+    .wc-carousel-item .wc-card #wIcon04 {
+        display: inline-block;
+        height: 24px;
+        padding: 1px 0 0 30px;
+        background: url('../../image/chatbotStyle/new/ico_note04.png') no-repeat 0 0;
+        background-size: 22px auto;
+        vertical-align: middle;
+    }
+
+    .wc-carousel-item .wc-card #wIcon05 {
+        display: inline-block;
+        height: 24px;
+        padding: 1px 0 0 30px;
+        background: url('../../image/chatbotStyle/new/ico_note05.png') no-repeat 0 0;
+        background-size: 22px auto;
+        vertical-align: middle;
+    }
+
+    .wc-carousel-item .wc-card #wIcon06 {
+        display: inline-block;
+        height: 24px;
+        padding: 1px 0 0 30px;
+        background: url('../../image/chatbotStyle/new/ico_note06.png') no-repeat 0 0;
+        background-size: 22px auto;
+        vertical-align: middle;
+    }
+
+    .wc-carousel-item .wc-card #wIcon07 {
+        display: inline-block;
+        height: 24px;
+        padding: 1px 0 0 30px;
+        background: url('../../image/chatbotStyle/new/ico_note07.png') no-repeat 0 0;
+        background-size: 22px auto;
+        vertical-align: middle;
+    }
+
+    .wc-carousel-item .wc-card #wIcon08 {
+        display: inline-block;
+        height: 24px;
+        padding: 1px 0 0 30px;
+        background: url('../../image/chatbotStyle/new/ico_note08.png') no-repeat 0 0;
+        background-size: 22px auto;
+        vertical-align: middle;
+    }
+
+    .wc-carousel-item .wc-card #wIcon09 {
+        display: inline-block;
+        height: 24px;
+        padding: 1px 0 0 30px;
+        background: url('../../image/chatbotStyle/new/ico_note09.png') no-repeat 0 0;
+        background-size: 22px auto;
+        vertical-align: middle;
+    }
 
 .menuBox ul {text-align:left;}
