@@ -131,13 +131,31 @@
 .takeBack {display:inline-block; width:calc(100% - 24px); margin:0 15px; padding:10px 12px; border:1px solid #c6c6c7; border-radius:4px;}
 .takeBack .endDate {display:inline-block; float:left; margin-right:15px;}
 .takeBack .endDate span {display:block; text-align:center;}
-.takeBack .endDate span.dateDay {font-size:18px; color:#333;}
+    .takeBack .endDate span.dateDay {
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+    }
 .takeBack .endDate span.dateWeek {font-size:11px; color:#999;}
 .takeBack .prodInfo {float:left; width:75%;}
 .takeBack .prodInfo span {display:block;}
-.takeBack .prodInfo span.prodName {margin-bottom:5px; font-size:15px; color:#333;}
-.takeBack .prodInfo span.prodNum {margin-bottom:5px; font-size:14px; color:#333;}
-.takeBack .prodInfo span.prodStatus {font-size:14px; color:#e61546;}
+    .takeBack .prodInfo span.prodName {
+        margin-bottom: 5px;
+        font-size: 15px;
+        color: #333;
+        font-weight: bold;
+    }
+    .takeBack .prodInfo span.prodNum {
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #333;
+        font-weight: bold;
+    }
+    .takeBack .prodInfo span.prodStatus {
+        font-size: 14px;
+        color: #e61546;
+        font-weight: bold;
+    }
 
 /* 자동완성 레이어 팝업 위치 수정 - 진주호 */
 #ui-id-1 {left:0 !important;}
