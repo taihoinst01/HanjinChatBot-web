@@ -21,8 +21,16 @@
 
 /* chat view */
 /*.wc-list{background-color: #f1f3f6}*/
-.wc-card{margin-bottom:18px;/*box-shadow: 3px 3px 5px 0px #424242;*/}
-.timeStampBot{font-size: 12px; color: #a6a6ab;line-height: 15px; text-align: right; /*background: #f1f3f6;*/padding-top: 3px !important; position:absolute; bottom:-5px; right:0}
+.wc-card{margin-bottom:0px;/*box-shadow: 3px 3px 5px 0px #424242;*/}
+.timeStampBot {
+    font-size: 12px;
+    color: #a6a6ab;
+    line-height: 0px;
+    text-align: right; /*background: #f1f3f6;*/
+    padding-top: 3px !important; /*position:absolute;*/
+    bottom: -5px;
+    right: 0
+}
 .timeStampUser{position:absolute; bottom:0; left:-70px; font-size: 12px;color:#a6a6ab; line-height: 15px;text-align: right;padding-top:7px !important}
 .ac-container{padding:0 !important; max-width:312px;/*border-radius:5px; background-color:#F8FFFF !important*/}
 .ac-container > div {color:#666 !important}
