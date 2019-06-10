@@ -1,6 +1,7 @@
 //초기 한번 Flag
 var startFlag = 0;
 var ssoFlag = 0;
+var telFlag = 0;
 
 //device check(PC, Mobile)
 var deviceChk;
@@ -3488,16 +3489,25 @@ var deviceChk;
                         //conversationId 추가
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
-                        //if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
-                        //    (location.href == defaultUrl
-                        //    || location.href == defaultUrl_pc
-                        //    || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_pc.html'
-                        //    || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html'
-                        //    || location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
-                        //    console.log("SSO Connect");
-                        //    ssoConnection();
-                        //    startFlag = 1;
-                        //}
+                        
+                        if (typeof (e.conversationId) == 'string' && startFlag == 0 )
+                        {
+                            telConnection();
+                            startFlag = 1;
+                            //telFlag = 1;
+                        }
+                        /*
+                        if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
+                            (location.href == defaultUrl
+                            || location.href == defaultUrl_pc
+                            || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_pc.html'
+                            || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html'
+                            || location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
+                            console.log("SSO Connect");
+                            ssoConnection();
+                            startFlag = 1;
+                        }
+                        */
                         return t === s.Uninitialized ? (e.connectionStatus$.next(s.Connecting), e.token && e.streamUrl ? (e.connectionStatus$.next(s.Online), i.Observable.of(t)) : e.startConversation().do(function (t) {
                             e.conversationId = t.conversationId, e.token = e.secret || t.token, e.streamUrl = t.streamUrl, e.referenceGrammarId = t.referenceGrammarId, e.secret || e.refreshTokenLoop(), e.connectionStatus$.next(s.Online)
                         }, function (t) {
@@ -7733,56 +7743,60 @@ var deviceChk;
                         }))
                     } else {
                         ////KSO First DLG HIDE 
-                        //var activityId = this.props.activity.id;
-                        ////var activityNum = activityId.split('|');
-                        //var ssoIdCheck = this.props.activity.text;
-                        //if(typeof(ssoIdCheck) != 'undefined'){
-                        //    ssoIdCheck = ssoIdCheck.substr(0, 5);
-                        //    ssoFlag = 1;
-                        //}
-
-                        //if (ssoFlag == 1 && ssoIdCheck != '' &&
-                        //    (location.href == defaultUrl
-                        //    || location.href == defaultUrl_pc
-                        //    || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_pc.html'
-                        //    || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html'
-                        //    || location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
-                        //    return o.createElement("div", {
-                        //        "data-activity-id": this.props.activity.id,
-                        //        className: i + " dpN",
-                        //        onClick: this.props.onClickActivity
-                        //    }, o.createElement("div", {
-                        //        className: "wc-message wc-message-from-" + r,
-                        //        ref: function (t) {
-                        //            return e.messageDiv = t
-                        //        }
-                        //    }, o.createElement("div", {
-                        //        className: s
-                        //    },this.props.children)), o.createElement("div", {
-                        //            className: "wc-message-from wc-message-from-" + r
-                        //    }))
-                        //} else {
-                        //    return o.createElement("div", {
-                        //        "data-activity-id": this.props.activity.id,
-                        //        className: i,
-                        //        onClick: this.props.onClickActivity
-                        //    }, o.createElement("div", {
-                        //        className: "wc-message wc-message-from-" + r,
-                        //        ref: function (t) {
-                        //            return e.messageDiv = t
-                        //        }
-                        //    }, o.createElement("div", {
-                        //        className: s
-                        //    },
-                        //    o.createElement("img", {
-                        //        src: "assets/image/chatbotStyle/ico_profi_80.png", className: "wc-message-callout"
-                        //    }
-                        //    ), this.props.children)), o.createElement("div", {
-                        //        className: "wc-message-from wc-message-from-" + r
-                        //    }))
-                        //}
+                        
+                        var telCheck = this.props.activity.text;
+                        
+                        if (typeof (telCheck) != 'undefined') {
+                            telCheck = telCheck.substr(0, 4);
+                            if (telCheck == "tel:") {
+                                telFlag = 1;
+                            } else {
+                                telFlag = 0;
+                            }
+                        } else {
+                            telFlag = 0;
+                        }
+                        console.log("telCheck===" + telCheck + "<br>");
+                        console.log("startFlag===" + startFlag + "<br>telFlag=====" + telFlag);
+                        
+                        if (startFlag == 1 && telFlag == 1) {
+                            return o.createElement("div", {
+                                "data-activity-id": this.props.activity.id,
+                                className: i + " dpN",
+                                onClick: this.props.onClickActivity
+                            }, o.createElement("div", {
+                                className: "wc-message wc-message-from-" + r,
+                                ref: function (t) {
+                                    return e.messageDiv = t
+                                }
+                            }, o.createElement("div", {
+                                className: s
+                            },this.props.children)), o.createElement("div", {
+                                    className: "wc-message-from wc-message-from-" + r
+                            }))
+                        } else {
+                            return o.createElement("div", {
+                                "data-activity-id": this.props.activity.id,
+                                className: i,
+                                onClick: this.props.onClickActivity
+                            }, o.createElement("div", {
+                                className: "wc-message wc-message-from-" + r,
+                                ref: function (t) {
+                                    return e.messageDiv = t
+                                }
+                            }, o.createElement("div", {
+                                className: s
+                            },
+                            o.createElement("img", {
+                                src: "assets/image/chatbotStyle/new/chatbot_hj.png", className: "wc-message-callout"
+                            }
+                            ), this.props.children)), o.createElement("div", {
+                                className: "wc-message-from wc-message-from-" + r
+                            }))
+                        }
 
                         //origin
+                        /*
                         return o.createElement("div", {
                             "data-activity-id": this.props.activity.id,
                             className: i,
@@ -7814,6 +7828,7 @@ var deviceChk;
                         ), this.props.children)), o.createElement("div", {
                             className: "wc-message-from wc-message-from-" + r
                         }))
+                        */
                     }
                 }, e
             }(o.Component);
@@ -21181,4 +21196,35 @@ function ssoConnection() {
     $.ajax(settings).done(function (response) {
         //console.log(response);
     });
+}
+
+function telConnection() {
+    //sso form 값
+    var pos;
+    
+    //pos = "tel:ABDDERFSDVD";
+    pos = "tel:" + getParameterByName("tel");
+    
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://directline.botframework.com/v3/directline/conversations/" + $('#conversationId').val() + "/activities",
+        "method": "POST",
+        "headers": {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer yC13LslTYjY.aVEoGDPPuVrPDAbn0AcEUCx7yQDLWBvL0g3niiFIMi8"
+        },
+        "processData": false,
+        "data": "{\n    \"type\": \"message\",\n    \"from\": {\n        \"id\": \"hanjinChatBot\"\n    },\n    \"text\": \"" + pos + "\"\n}"
+    }
+    $.ajax(settings).done(function (response) {
+        //console.log(response);
+    });
+}
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + ":([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
