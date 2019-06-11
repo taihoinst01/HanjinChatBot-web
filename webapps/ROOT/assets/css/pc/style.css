@@ -23,7 +23,7 @@
 /*.wc-list{background-color: #f1f3f6}*/
 .wc-card{margin-bottom:0px;/*box-shadow: 3px 3px 5px 0px #424242;*/}
 .timeStampBot {
-    font-size: 12px;
+    font-size: 11px;
     color: #a6a6ab;
     line-height: 0px;
     text-align: right; /*background: #f1f3f6;*/
@@ -31,7 +31,7 @@
     bottom: -5px;
     right: 0
 }
-.timeStampUser{position:absolute; bottom:0; left:-70px; font-size: 12px;color:#a6a6ab; line-height: 15px;text-align: right;padding-top:7px !important}
+.timeStampUser{position:absolute; bottom:0; left:-70px; font-size: 11px;color:#a6a6ab; line-height: 15px;text-align: right;padding-top:7px !important}
 .ac-container{padding:0 !important; max-width:312px;/*border-radius:5px; background-color:#F8FFFF !important*/}
 .ac-container > div {color:#666 !important}
 .ac-image{min-height:150px;}
@@ -136,7 +136,7 @@
 }
 
 /* 반품택배예약 쪽 추가 - 진주호 */
-.takeBack {display:inline-block; width:calc(100% - 24px); margin:0 15px; padding:10px 12px; border:1px solid #c6c6c7; border-radius:4px;}
+.takeBack {display:inline-block; width:calc(100% - 24px); margin:0 15px; padding:10px 12px; border:2px solid #c6c6c7; border-radius:4px;}
 .takeBack .endDate {display:inline-block; float:left; margin-right:15px;}
 .takeBack .endDate span {display:block; text-align:center;}
     .takeBack .endDate span.dateDay {
