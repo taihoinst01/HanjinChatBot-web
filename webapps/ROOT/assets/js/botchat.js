@@ -7788,7 +7788,8 @@ var deviceChk;
                                 className: s
                             },
                             o.createElement("img", {
-                                src: "assets/image/chatbotStyle/new/chatbot_hj.png", className: "wc-message-callout"
+                                //src: "assets/image/chatbotStyle/new/chatbot_hj.png", className: "wc-message-callout"
+                                src: "assets/image/chatbotStyle/new/icon_new.png", className: "wc-message-callout"
                             }
                             ), this.props.children)), o.createElement("div", {
                                 className: "wc-message-from wc-message-from-" + r
@@ -21049,8 +21050,8 @@ function appendLoadingDiv() {
             //+ '<path class="point-left" d="m0,6 l6 6 v-12 z"></path>'
             //+ '<path class="point-right" d="m6,6 l-6 6 v-12 z"></path>'
             //+ '</svg>'
-            //+ '<img src="assets/image/chatbotStyle/ico_profi_80.png" class="wc-message-callout">'
-            + '<img src="assets/image/chatbotStyle/new/chatbot_hj.png" class="wc-message-callout">'
+            //+ '<img src="assets/image/chatbotStyle/new/chatbot_hj.png" class="wc-message-callout">'
+            + '<img src="assets/image/chatbotStyle/new/icon_new.png" class="wc-message-callout">'
             + '<div>'
             + '<div class="format-markdown">'
             + '<p class="ac-container" style="border:1px solid #555;border-radius:7px"><img src="assets/image/chatbotStyle/loading.gif" style="width:80px;padding:10px" /></p>'
