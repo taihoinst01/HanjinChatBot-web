@@ -7745,10 +7745,13 @@ var deviceChk;
                         ////KSO First DLG HIDE 
                         
                         var telCheck = this.props.activity.text;
+                        var consultCheck = this.props.activity.text;
                         
-                        if (typeof (telCheck) != 'undefined') {
+                        if (typeof (telCheck) != 'undefined' || typeof (consultCheck) != 'undefined') {
                             telCheck = telCheck.substr(0, 4);
-                            if (telCheck == "tel:") {
+                            consultCheck = consultCheck.substr(0, 11);
+
+                            if (telCheck == "tel:" || consultCheck == "consulting:") {
                                 telFlag = 1;
                             } else {
                                 telFlag = 0;
@@ -7756,6 +7759,7 @@ var deviceChk;
                         } else {
                             telFlag = 0;
                         }
+                        
                         console.log("telCheck===" + telCheck + "<br>");
                         console.log("startFlag===" + startFlag + "<br>telFlag=====" + telFlag);
                         
@@ -21136,51 +21140,6 @@ function ssoConnection() {
     || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html'){
         pos = deviceChk + "sso:" + $("#cjworld_id_get_test").val();
     }
-    
-    //var directLineUrl = "https://directline.botframework.com";
-    //var secretKey = "jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0";	//USWEST
-
-    //var info = JSON.stringify({
-    //    //type: 'message',
-    //    text: 'sso:' + pos.key + ':' + pos.cjworld_id + ':' + pos.lang,
-    //    from: { id: 'userid' },
-    //});
-
-    //var info = "{ 'text': 'sso', 'from': 'cjEmployeeChatBot' }  ";
-
-    ////var dataValue = { 'key': pos.key, 'cjworldId': pos.cjworld_id, 'lang': pos.lang };
-    //$.ajax({
-    //    type: "POST",
-    //    //type: "GET",
-    //    url: directLineUrl + "/api/conversations/" + $('#conversationId').val() + "/messages",
-    //    dataType : "json",
-    //    //data: info,
-    //    body: info,
-    //    headers: {
-    //        "Authorization": "Bearer " + secretKey,
-    //        'Content-Type': 'application/json'
-    //    },
-    //    success: function (data) {
-    //        //window.location.assign('https://openapi.naver.com/v1/map/staticmap.bin?clientId=dXUekyWEBhyYa2zD2s33&url=file:///C:/Users/user/Desktop&crs=EPSG:4326&center=127.1141382,37.3599968&level=10&w=320&h=320&baselayer=default&markers=127.1141382,37.3599968');
-    //        alert(data);
-    //    },
-    //    error: function (e) {
-    //        alert("error1");
-    //    }
-    //});
-
-    //var settings = {
-    //    "async": true,
-    //    "crossDomain": true,
-    //    "url": "https://directline.botframework.com/api/conversations/" + $('#conversationId').val() +"/messages",
-    //    "method": "POST",
-    //    "headers": {
-    //        "Authorization": "Bearer jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0",
-    //        "Content-Type": "application/json",
-    //    },
-    //    "processData": false,
-    //    "data": "{\n    \"text\": \""+pos+"\",\n    \"from\": \"cjEmployeeChatBot\"\n}"
-    //}
 
     var settings = {
         "async": true,
@@ -21218,6 +21177,42 @@ function telConnection() {
         "processData": false,
         "data": "{\n    \"type\": \"message\",\n    \"from\": {\n        \"id\": \"hanjinChatBot\"\n    },\n    \"text\": \"" + pos + "\"\n}"
     }
+    $.ajax(settings).done(function (response) {
+        //console.log(response);
+    });
+}
+
+function consultingReportConnection() {
+    
+    var pos;
+
+    //var c_count = $('#c_count').val();
+    var c_count = $(".starOn").length;
+    var c_content = $('#c_content').val();
+    if (c_content == "") {
+        c_content = "고객님의견공백";
+    }
+    var c_data = c_count + "&" + c_content;
+
+    //pos = "consulting:" + getParameterByName(c_data);
+    pos = "consulting:" + c_data;
+
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://directline.botframework.com/v3/directline/conversations/" + $('#conversationId').val() + "/activities",
+        "method": "POST",
+        "headers": {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer yC13LslTYjY.aVEoGDPPuVrPDAbn0AcEUCx7yQDLWBvL0g3niiFIMi8"
+        },
+        "processData": false,
+        "data": "{\n    \"type\": \"message\",\n    \"from\": {\n        \"id\": \"hanjinChatBot\"\n    },\n    \"text\": \"" + pos + "\"\n}"
+    }
+
+    $('#consultingModal').modal('hide');
+    $('#consultingResultModal').modal('show');
+
     $.ajax(settings).done(function (response) {
         //console.log(response);
     });

@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta http-equiv="X-Frame-Options" content="deny" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
     <!-- meta name="viewport" content="width=380" / -->
 
@@ -12,6 +13,43 @@
     <link rel="stylesheet" href="assets/css/common.css" />
     <link rel="stylesheet" href="assets/css/pc/botchat.css" />
     <link rel="stylesheet" href="assets/css/pc/style.css" />
+    <style>
+
+        .modal {
+            background-color: white !important;
+            opacity: 0.6;
+        }
+        
+        .starR {
+            background: url('http://miuu227.godohosting.com/images/icon/ico_review.png') no-repeat right 0;
+            background-size: auto 100%;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            text-indent: -9999px;
+            cursor: pointer;
+        }
+
+            .starR.starOn {
+                background-position: 0 0;
+            }
+
+        .reportTitle h3 {
+            text-align: center;
+            font-weight: 900;
+        }
+
+        .reportContentsTitle h4 {
+            font-weight: 600;
+            padding-left: 20px;
+            color: #FF6633;
+        }
+
+        .reportContentsGuidance h6 {
+            color: #7F7F7F;
+            padding-left: 20px;
+        }
+    </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery-ui.js"></script>
@@ -19,6 +57,22 @@
     <script type="text/javascript" src="assets/js/start.js"></script>
     <script type="text/javascript" src="assets/js/pc/ui.js"></script>
     <script type="text/javascript" src="assets/js/pc/autocompleteword.js"></script>
+    <script>
+        function goShowUseReportModal() {
+            $('#consultingModal').modal('show');
+            $("#consulting_report")[0].reset(); 
+        }
+
+        $(document).ready(function () {
+            //별 클릭시 이미지변환
+            $('.starRev span').click(function () {
+                $(this).parent().children('span').removeClass('starOn');
+                $(this).addClass('starOn').prevAll('span').addClass('starOn');
+                return false;
+            });
+
+        });
+    </script>
     <title>한진택배 인공지능 챗봇</title>
 </head>
 <body>
@@ -48,5 +102,68 @@
         </div>
         <!-- 끝 -->
     </div>
+
+
+
+    <div class="modal fade" id="consultingModal" role="dialog" tabindex="-1" data-backdrop="false">
+        <div class="modal-dialog">
+
+            <div class="modal-header">
+                <div class="reportTitle">
+                    <h3><img src="assets/image/chatbotStyle/new/logo1_1.png" width="50"/> &nbsp;챗봇 상담 만족도 평가하기</h3>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <form name="consulting_report" id="consulting_report" method="post">
+                    <div class="starRev" style="text-align: center">
+                        <span class="starR starOn">별1</span>&nbsp;&nbsp;&nbsp;
+                        <span class="starR">별2</span>&nbsp;&nbsp;&nbsp;
+                        <span class="starR">별3</span>&nbsp;&nbsp;&nbsp;
+                        <span class="starR">별4</span>&nbsp;&nbsp;&nbsp;
+                        <span class="starR">별5</span>
+                    </div>
+                    <br>
+                    <div class="reportContents">
+                        <div class="reportContentsTitle">
+                            <h4>챗봇 상담 후기</h4>
+                        </div>
+                        <div class="reportContentsGuidance">
+                            <h6>고객님의 소중한 의견을 남겨주세요(150자 이내 작성 가능)</h6>
+                        </div>
+                        <div class="reportContentsMessage">
+                            <textarea id="c_content" placeholder="입력" class="form-control" rows="7" maxlength="150"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" name="button" class="btn btn-color2" onclick="consultingReportConnection()">보내기</button>
+                <button type="button" name="button" class="btn btn-color2" data-dismiss="modal">닫기</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal fade" id="consultingResultModal" role="dialog" tabindex="-1">
+        <div class="modal-dialog">
+
+            <div class="modal-header">
+                <div class="reportTitle">
+                    <h3>챗봇 상담 만족도 평가하기</h3>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <h4>고객님의 소중한 의견 감사합니다.</h4>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" name="button" class="btn btn-color2" data-dismiss="modal">닫기</button>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 </html>

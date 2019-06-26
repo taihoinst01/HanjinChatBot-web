@@ -40,6 +40,9 @@ $(function () {
     //챗봇창 상단 생성
     $(".wc-header > span").add(
         //"<span class='chatTitle'></span>"
+        //"<span style='border: 0px solid gold; float: left; width:30%;margin-top:15px'><button onClick='goShowUseReportModal()'>상담종료</button></span>" +
+        "<div class='over' style='position:absolute;margin-top:15px;margin-left:10px;'><button onClick='goShowUseReportModal()'>상담종료</button></div>"+
+        //"<span class='chatTitleText' style='border: 0px solid gold; float:left; width:60%;'>한진택배 ChatBot</span>"
         "<span class='chatTitleText'>한진택배 ChatBot</span>"
     ).appendTo(".wc-header");
 
