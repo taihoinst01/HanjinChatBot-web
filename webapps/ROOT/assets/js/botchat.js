@@ -3159,6 +3159,7 @@ var deviceChk;
                 switch (e.contentType) {
                     case "application/vnd.microsoft.card.hero":
                         //KSO CUSTER AREA
+                        
                         if (e.content.card_division == "play") {
                             if (!e.content) return null;
                             var r = new i.AdaptiveCardBuilder;
@@ -3219,6 +3220,8 @@ var deviceChk;
                                 , o.createElement("div", { className: "hidden", alt: e.content.title })
                                 , o.createElement("div", { className: "hidden", alt: e.content.card_value }))
                         } else {
+                            alert("22222222222222222222222222222");
+                            $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
                             if (!e.content) return null;
                             var r = new i.AdaptiveCardBuilder;
                             //TTS 적용 
@@ -3254,9 +3257,11 @@ var deviceChk;
                                 onImageLoad: t.onImageLoad,
                                 onCardAction: t.onCardAction,
                                 onClick: n(e.content.tap)
-                            });
+                                });
+                            
                         }
-
+                        
+                        
 
 
                     case "application/vnd.microsoft.card.thumbnail":
@@ -7759,7 +7764,7 @@ var deviceChk;
                         } else {
                             telFlag = 0;
                         }
-                        
+                        $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
                         console.log("telCheck===" + telCheck + "<br>");
                         console.log("startFlag===" + startFlag + "<br>telFlag=====" + telFlag);
                         
