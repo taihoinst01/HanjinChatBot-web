@@ -3220,7 +3220,7 @@ var deviceChk;
                                 , o.createElement("div", { className: "hidden", alt: e.content.title })
                                 , o.createElement("div", { className: "hidden", alt: e.content.card_value }))
                         } else {
-                            alert("22222222222222222222222222222");
+                            
                             $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
                             if (!e.content) return null;
                             var r = new i.AdaptiveCardBuilder;
