@@ -28,7 +28,7 @@ function isMobile() {
 function closeWin() {
     var test = "quit";
 
-    if (cmd == 'quit') {
+    if (test == 'quit') {
         open(location, '_self').close();
     }
     return false;   
