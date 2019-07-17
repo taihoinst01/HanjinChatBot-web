@@ -6,7 +6,14 @@
 .banner:hover{background:url(../../image/chatbotStyle/btn_chatlink_hover.png) no-repeat; width:170px;height:47px;position:relative;top:340px;left:23.5%;transform: translateX(-50%) translateY(-10%);cursor:pointer}*/
 
 /* chat TOP */
-.chatTitle{background: url("../../image/chatbotStyle/topbar_title.png") no-repeat;background-size:300px 50px; height:50px;width:300px; display: inline-block;}
+.chatTitle {
+    background: url("../../image/chatbotStyle/new/title_sub.png") no-repeat;
+    background-size: 200px 32px;
+    height: 48px;
+    width: 300px;
+    display: inline-block;
+    background-position: center center;
+}
 .chatTitleText {display:inline-block; margin-top:11px; padding:0 0 5px 32px;font-size:18px; font-weight:bold; color:#fff; letter-spacing:0; background: url('../../image/chatbotStyle/new/ico_title.png') no-repeat 0 3px; background-size:27px 26px;}
 .topIcon01{background: url("../../image/chatbotStyle/btn_down.png") no-repeat;  width:14px;height:13px;display: inline-block;top: 14px; right: 58px;position: absolute} 
 .topIcon02{background: url("../../image/chatbotStyle/btn_fsize.png") no-repeat;  width:12px;height:12px;display: inline-block;top: 14px; right: 34px;position: absolute;}
@@ -37,7 +44,7 @@
 .ac-image{min-height:150px;}
 .wc-list > .wc-card {
     width:98%; /* iphone6 대응 */
-    background-color: #fff !important; /*border-color:#F8FFFF !important*/
+    background-color: #F7F7F7 !important; /*border-color:#F8FFFF !important*/
     border: 1px solid #c0c0c0;
 }
 .wc-carousel-item > .wc-card{background-color:#fff !important;max-width:200px; /*border-color:#F8FFFF !important;*/ border:1px solid #c0c0c0}

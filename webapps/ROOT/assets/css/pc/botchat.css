@@ -44,8 +44,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   box-sizing: content-box;
   color: #ffffff;
       border-bottom:4px solid #ddd
+        background-color: #3472c5;
   */
-    background-color: #3472c5;
     font-weight: 500;
     height: 50px;
     left: 0;
@@ -56,6 +56,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     top: 0;
     z-index: 1;
     text-align: center;
+    /*border-bottom: 2px solid #3472c5;*/
 }
 
 .wc-time {
@@ -74,7 +75,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     right: 0;
     top: 50px;
     transition: transform 0.2s cubic-bezier(0, 0, 0.5, 1);
-    background-color: #e6ecf3;
+    /*background-color: #e6ecf3;*/
 }
   .wc-message-groups.no-header {
     top: 0; }
@@ -430,7 +431,14 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   right: -6px; }
 
 .wc-message-from-me .wc-message-content span{font-size:14px;color:#fff;line-height:15px;}
-.wc-message-from-me .wc-message-content span > span{display: block;padding:15px;border-radius:8px 0 8px 8px;border:1px solid #e0e0e0;background:#393772;color:#fff;/*box-shadow: 3px 3px 5px 0px #424242;*/}
+    .wc-message-from-me .wc-message-content span > span {
+        display: block;
+        padding: 15px;
+        border-radius: 8px 0 8px 8px;
+        border: 1px solid #e0e0e0;
+        background: #63B5E5;
+        color: #fff; /*box-shadow: 3px 3px 5px 0px #424242;*/
+    }
 
 /* from bot */
 .wc-message-from-bot {

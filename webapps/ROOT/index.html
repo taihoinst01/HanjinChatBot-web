@@ -9,16 +9,16 @@
 
     <link rel="stylesheet" href="assets/css/jquery-ui.css" />
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css" />
+    
     <link rel="stylesheet" href="assets/css/common.css" />
     <link rel="stylesheet" href="assets/css/pc/botchat.css" />
     <link rel="stylesheet" href="assets/css/pc/style.css" />
     <style>
-
         .modal {
             background-color: white !important;
-            opacity: 0.6;
+            z-index: 1000;
         }
-        
+
         .starR {
             background: url('http://miuu227.godohosting.com/images/icon/ico_review.png') no-repeat right 0;
             background-size: auto 100%;
@@ -49,21 +49,33 @@
             padding-left: 20px;
         }
 
-        .carousel-inner > .item > img {
-            height: 50%;
+
+        #userGuideDiv {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 999;
+            height: 100%;
+            width: 100%
         }
     </style>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+        </script><script type="text/javascript" src="assets/js/bootstrap.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
     <script type="text/javascript" src="assets/js/jquery-ui.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+
     <script type="text/javascript" src="assets/js/start.js"></script>
     <script type="text/javascript" src="assets/js/pc/ui.js"></script>
     <script type="text/javascript" src="assets/js/pc/autocompleteword.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
     <script>
         function goShowUseReportModal() {
             $('#consultingModal').modal('show');
-            $("#consulting_report")[0].reset(); 
+            $("#consulting_report")[0].reset();
         }
 
         $(document).ready(function () {
@@ -74,10 +86,13 @@
                 return false;
             });
 
+            $('#userGuideDiv').hide();
+
         });
 
         function goShowUserGuideModal() {
-            $('#userGuideModal').modal('show');
+            //$('#userGuideModal').modal('show');
+            $('#userGuideDiv').show();
         }
     </script>
     <title>한진택배 인공지능 챗봇</title>
@@ -87,129 +102,126 @@
 
     <!--<input type="hidden" id="cjworld_id_get" value="g1USFCLOzaxOXvfee/4yzvvuG1gyo4iW"/>
     <input type="hidden" id="cjworld_id_post" value="g1USFCLOzaxOXvfee/4yzvvuG1gyo4iW"/>-->
-
-    <div class="mainBG">
-        <!-- 여기서 부터 -->
-        <div class="bot-wrap chatOn">
-            <div id="bot" />
-            <script src="assets/js/botchat.js"></script>
-            <script>
-                BotChat.App({
-                    directLine: {
-                        //                        secret: 'DaL8yJX-9dQ.a7sAYrmH71hQF0drR4PDyGdEKWzq7n5gC6CB_Xx8Vfs'   //TaihoChatBotV4
-                        secret: 'yC13LslTYjY.aVEoGDPPuVrPDAbn0AcEUCx7yQDLWBvL0g3niiFIMi8'   //HanjinChatBot
-                        //,domain: 'https://northamerica.directline.botframework.com/v3/directline'
-                    },
-                    user: { id: 'userid' },
-                    bot: { id: 'botid' },
-                    resize: 'detect'
-                }, document.getElementById("bot"));
-            </script>
-            <!--<script src="assets/js/ssoConnect.js"></script>-->
-        </div>
-        <!-- 끝 -->
-    </div>
-
-
-
-    <div class="modal fade" id="consultingModal" role="dialog" tabindex="-1" data-backdrop="false">
-        <div class="modal-dialog">
-
-            <div class="modal-header">
-                <div class="reportTitle">
-                    <h3><img src="assets/image/chatbotStyle/new/logo1_1.png" width="50" /> &nbsp;챗봇 상담 만족도 평가하기</h3>
-                </div>
+    <div class="wrapper>
+        <div class="mainBG">
+            <!-- 여기서 부터 -->
+            <div class="bot-wrap chatOn">
+                <div id="bot" />
+                <script src="assets/js/botchat.js"></script>
+                <script>
+                    BotChat.App({
+                        directLine: {
+                            //                        secret: 'DaL8yJX-9dQ.a7sAYrmH71hQF0drR4PDyGdEKWzq7n5gC6CB_Xx8Vfs'   //TaihoChatBotV4
+                            secret: 'yC13LslTYjY.aVEoGDPPuVrPDAbn0AcEUCx7yQDLWBvL0g3niiFIMi8'   //HanjinChatBot
+                            //,domain: 'https://northamerica.directline.botframework.com/v3/directline'
+                        },
+                        user: { id: 'userid' },
+                        bot: { id: 'botid' },
+                        resize: 'detect'
+                    }, document.getElementById("bot"));
+                </script>
+                <!--<script src="assets/js/ssoConnect.js"></script>-->
             </div>
+            <!-- 끝 -->
+        </div>
 
-            <div class="modal-body">
-                <form name="consulting_report" id="consulting_report" method="post">
-                    <div class="starRev" style="text-align: center">
-                        <span class="starR starOn">별1</span>&nbsp;&nbsp;&nbsp;
-                        <span class="starR starOn">별2</span>&nbsp;&nbsp;&nbsp;
-                        <span class="starR starOn">별3</span>&nbsp;&nbsp;&nbsp;
-                        <span class="starR starOn">별4</span>&nbsp;&nbsp;&nbsp;
-                        <span class="starR starOn">별5</span>
+
+
+        <div class="modal fade" id="consultingModal" role="dialog" tabindex="-1" data-backdrop="false">
+            <div class="modal-dialog">
+
+                <div class="modal-header">
+                    <div class="reportTitle">
+                        <h3><img src="assets/image/chatbotStyle/new/logo1_1.png" width="50" /> &nbsp;챗봇 상담 만족도 평가하기</h3>
                     </div>
-                    <br>
-                    <div class="reportContents">
-                        <div class="reportContentsTitle">
-                            <h4>챗봇 상담 후기</h4>
+                </div>
+
+                <div class="modal-body">
+                    <form name="consulting_report" id="consulting_report" method="post">
+                        <div class="starRev" style="text-align: center">
+                            <span class="starR starOn">별1</span>&nbsp;&nbsp;&nbsp;
+                            <span class="starR starOn">별2</span>&nbsp;&nbsp;&nbsp;
+                            <span class="starR starOn">별3</span>&nbsp;&nbsp;&nbsp;
+                            <span class="starR starOn">별4</span>&nbsp;&nbsp;&nbsp;
+                            <span class="starR starOn">별5</span>
                         </div>
-                        <!--
-                        <div class="reportContentsGuidance">
-                            <h6>고객님의 소중한 의견을 남겨주세요(150자 이내 작성 가능)</h6>
+                        <br>
+                        <div class="reportContents">
+                            <div class="reportContentsTitle">
+                                <h4>챗봇 상담 후기</h4>
+                            </div>
+                            <!--
+                            <div class="reportContentsGuidance">
+                                <h6>고객님의 소중한 의견을 남겨주세요(150자 이내 작성 가능)</h6>
+                            </div>
+                                -->
+                            <div class="reportContentsMessage">
+                                <textarea id="c_content" placeholder="고객님의 소중한 의견을 남겨주세요(150자 이내 작성 가능)" class="form-control" rows="7" maxlength="150"></textarea>
+                            </div>
                         </div>
-                            -->
-                        <div class="reportContentsMessage">
-                            <textarea id="c_content" placeholder="고객님의 소중한 의견을 남겨주세요(150자 이내 작성 가능)" class="form-control" rows="7" maxlength="150"></textarea>
-                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" name="button" class="btn btn-primary" onclick="consultingReportConnection()">보내기</button>
+                    <!--<button type="button" name="button" class="btn btn-color2" data-dismiss="modal">닫기</button>-->
+                    <button type="button" name="button" class="btn btn-primary" onclick="return self.close();">닫기</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="consultingResultModal" role="dialog" tabindex="-1">
+            <div class="modal-dialog">
+
+                <div class="modal-header">
+                    <div class="reportTitle">
+                        <h3><img src="assets/image/chatbotStyle/new/logo1_1.png" width="50" /> &nbsp;챗봇 상담 만족도 평가하기</h3>
                     </div>
-                </form>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" name="button" class="btn btn-color2" onclick="consultingReportConnection()">보내기</button>
-                <!--<button type="button" name="button" class="btn btn-color2" data-dismiss="modal">닫기</button>-->
-                <button type="button" name="button" class="btn btn-color2" onclick="return self.close();">닫기</button>
-            </div>
-
-        </div>
-    </div>
-    <div class="modal fade" id="consultingResultModal" role="dialog" tabindex="-1">
-        <div class="modal-dialog">
-
-            <div class="modal-header">
-                <div class="reportTitle">
-                    <h3><img src="assets/image/chatbotStyle/new/logo1_1.png" width="50" /> &nbsp;챗봇 상담 만족도 평가하기</h3>
                 </div>
-            </div>
-            <div class="modal-body">
-                <h4>고객님의 소중한 의견 감사합니다.</h4>
-            </div>
-            <div class="modal-footer">
-                <!--<button type="button" name="button" class="btn btn-color2" data-dismiss="modal">닫기</button>-->
-                <button type="button" name="button" class="btn btn-color2" onclick="self.close();">닫기</button>
-            </div>
-
-        </div>
-    </div>
-    <!--이용가이드-->
-    <div class="modal fade" id="userGuideModal" role="dialog" tabindex="-1">
-        <div class="modal-dialog">
-
-            <div class="modal-header">
-                <div class="reportTitle">
-                    <h3>챗봇 사용자 가이드</h3>
+                <div class="modal-body">
+                    <h4>고객님의 소중한 의견 감사합니다.</h4>
                 </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img class="d-block h-80" src="assets/image/chatbotStyle/new/guide1.png" alt="First slide">
-                        </div>
-                        <div class="item">
-                            <img class="d-block h-80" src="assets/image/chatbotStyle/new/guide2.png" alt="Second slide">
-                        </div>
-                        <div class="item">
-                            <img class="d-block h-80" src="assets/image/chatbotStyle/new/guide3.png" alt="Third slide">
-                        </div>
-                    </div>
-                    <a class="left carousel-control" href="#carouselExampleControls" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#carouselExampleControls" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                <div class="modal-footer">
+                    <!--<button type="button" name="button" class="btn btn-color2" data-dismiss="modal">닫기</button>-->
+                    <button type="button" name="button" class="btn btn-color2" onclick="self.close();">닫기</button>
                 </div>
+
             </div>
         </div>
-    </div>
 
+
+        <div id="userGuideDiv" class="carousel slide taiho" data-interval="false" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#userGuideDiv" data-slide-to="0" class="active"></li>
+                <li data-target="#userGuideDiv" data-slide-to="1"></li>
+                <li data-target="#userGuideDiv" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="assets/image/chatbotStyle/new/guide1.png" width="100%" height="100%">
+                </div>
+                <div class="item">
+                    <img src="assets/image/chatbotStyle/new/guide2.png" width="100%" height="100%">
+                </div>
+                <div class="item">
+                    <img src="assets/image/chatbotStyle/new/guide3.png" width="100%" height="100%">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#userGuideDiv" role="button" data-slide="prev" style="background: none;">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#userGuideDiv" role="button" data-slide="next" style="background: none;">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        </div>
 </body>
 </html>
