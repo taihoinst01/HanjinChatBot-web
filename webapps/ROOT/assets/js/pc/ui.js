@@ -178,6 +178,8 @@ $(function () {
 
 function guideMenuOrgMent(orgMent) {
     //var v = $(this).text();
+    alert("test==========");
+    alert("test==========" + orgMent);
     var v = orgMent;
     $('div.wc-console').addClass('has-text');
     $('input[type="text"].wc-shellinput').attr('value', v).val(v);
