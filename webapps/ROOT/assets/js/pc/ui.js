@@ -38,7 +38,7 @@ $(function () {
     $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement', 'top').attr('data-html', 'true').attr('title', '<li class="menuSelectBtn">자주하는 질문</li><br><li class="menuSelectBtn">이용가이드</li><br><li class="menuSelectBtn">공지사항</li>')
         .attr('data-template', '<div class="tooltip tool2" role="tooltip"><div class="tooltip-arrow arrow2"></div><div class="tooltip-inner"></div></div>').tooltip('show');
     */
-    $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement', 'top').attr('data-html', 'true').attr('title', '<li class="guideMenu" onClick="javascript:guideMenuOrgMent(\'자주하는질문\');" style="cursor: pointer;">자주하는 질문</li><br><a href="#" onClick="goShowUserGuideModal()"><li class="guideMenu">이용가이드</li></a><br><a href="https://www.hanjin.co.kr/Delivery_html/business/notice_list.jsp" target="_blank"><li class="guideMenu">공지사항</li></a>')
+    $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement', 'top').attr('data-html', 'true').attr('title', '<button type="button" class="btn btn-default" onClick="guideMenuOrgMenttest();">테스트</button><li class="guideMenu" onClick="javascript:guideMenuOrgMent(\'자주하는질문\');" style="cursor: pointer;">자주하는 질문</li><br><a href="#" onClick="goShowUserGuideModal()"><li class="guideMenu">이용가이드</li></a><br><a href="https://www.hanjin.co.kr/Delivery_html/business/notice_list.jsp" target="_blank"><li class="guideMenu">공지사항</li></a>')
         .attr('data-template', '<div class="tooltip tool2" role="tooltip"><div class="tooltip-arrow arrow2"></div><div class="tooltip-inner"></div></div>').tooltip('hide');
     
     
@@ -177,8 +177,6 @@ $(function () {
 
 function guideMenuOrgMent(orgMent) {
     //var v = $(this).text();
-    alert("test==========");
-    alert("test==========" + orgMent);
     var v = orgMent;
     $('div.wc-console').addClass('has-text');
     $('input[type="text"].wc-shellinput').attr('value', v).val(v);
@@ -188,4 +186,8 @@ function guideMenuOrgMent(orgMent) {
     //$('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
     $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
     $('.wc-message-groups').css({ 'bottom': 0 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+}
+
+function guideMenuOrgMenttest() {
+    alert("asdfasdfdasfadsfdasfdsafdasfdasdfasfsd==========");
 }
