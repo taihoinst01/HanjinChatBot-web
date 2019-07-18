@@ -38,7 +38,7 @@ $(function () {
     $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement', 'top').attr('data-html', 'true').attr('title', '<li class="menuSelectBtn">자주하는 질문</li><br><li class="menuSelectBtn">이용가이드</li><br><li class="menuSelectBtn">공지사항</li>')
         .attr('data-template', '<div class="tooltip tool2" role="tooltip"><div class="tooltip-arrow arrow2"></div><div class="tooltip-inner"></div></div>').tooltip('show');
     */
-    $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement', 'top').attr('data-html', 'true').attr('title', '<a href="#" onClick="javascript:guideMenuOrgMent(\'자주하는질문\')" style="cursor: pointer;"><li class="guideMenu">자주하는 질문</li></a><br><a href="#" onClick="goShowUserGuideModal()"><li class="guideMenu">이용가이드</li></a><br><a href="https://www.hanjin.co.kr/Delivery_html/business/notice_list.jsp" target="_blank"><li class="guideMenu">공지사항</li></a>')
+    $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement', 'top').attr('data-html', 'true').attr('title', '<a href="#" onClick="javascript:guideMenuOrgMent(\'자주하는질문\');void(0);"><li class="guideMenu">자주하는 질문</li></a><br><a href="#" onClick="goShowUserGuideModal()"><li class="guideMenu">이용가이드</li></a><br><a href="https://www.hanjin.co.kr/Delivery_html/business/notice_list.jsp" target="_blank"><li class="guideMenu">공지사항</li></a>')
         .attr('data-template', '<div class="tooltip tool2" role="tooltip"><div class="tooltip-arrow arrow2"></div><div class="tooltip-inner"></div></div>').tooltip('hide');
     
     
@@ -173,12 +173,6 @@ $(function () {
     });
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////
-    $(".guideMenu").click(function () {
-
-        alert("test2222==========");
-
-
-    });
 });
 
 function guideMenuOrgMent(orgMent) {
