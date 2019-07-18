@@ -34,9 +34,14 @@ $(function () {
     $('.wc-shellinput').blur();
 
     //tooltip
-    $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement', 'top').attr('title', '바로가기')
+    /*
+    $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement', 'top').attr('data-html', 'true').attr('title', '<li class="menuSelectBtn">자주하는 질문</li><br><li class="menuSelectBtn">이용가이드</li><br><li class="menuSelectBtn">공지사항</li>')
         .attr('data-template', '<div class="tooltip tool2" role="tooltip"><div class="tooltip-arrow arrow2"></div><div class="tooltip-inner"></div></div>').tooltip('show');
-
+    */
+    $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement', 'top').attr('data-html', 'true').attr('title', '<a href="#" onClick="guideMenuOrgMent(\'자주하는질문\')"><li class="guideMenu">자주하는 질문</li></a><br><a href="#" onClick="goShowUserGuideModal()"><li class="guideMenu">이용가이드</li></a><br><a href="https://www.hanjin.co.kr/Delivery_html/business/notice_list.jsp" target="_blank"><li class="guideMenu">공지사항</li></a>')
+        .attr('data-template', '<div class="tooltip tool2" role="tooltip"><div class="tooltip-arrow arrow2"></div><div class="tooltip-inner"></div></div>').tooltip('hide');
+    
+    
     //챗봇창 상단 생성
     $(".wc-header > span").add(
         "<div class='over' style='position:absolute;margin-top:10px;margin-left:10px;'><img src='assets/image/chatbotStyle/new/btn_chatend.png' width='70px' height='28px' onClick='goShowUseReportModal()'></div>" +
@@ -52,6 +57,7 @@ $(function () {
         "</div > ").appendTo(".wc-chatview-panel");
 
     //챗봇 MENU BTN
+    /*
     $(".wc-console > div").add(
         "<div class='menuBox off'>" +
         "<ul type='none'>" +
@@ -66,7 +72,8 @@ $(function () {
         "<li class='menuSelectBtn'>고객의말씀</li>" +
         "</ul>" +
         "</div > ").appendTo(".wc-console");
-
+    */
+   
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     //챗봇 menu 선택
     $('.menuSelectBtn').click(function () {
@@ -79,7 +86,7 @@ $(function () {
         $('label.wc-send').trigger('click');
         $('input[type="text"].wc-shellinput').attr('value', '').val('').focus();
         $('.wc-console').removeClass('has-text').animate({ 'bottom': 0 + 'px' }, 'fast');
-        $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
+        //$('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
         $('.wc-message-groups').css({ 'bottom': 0 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
@@ -98,33 +105,20 @@ $(function () {
             $('.wc-shellinput').css({ 'color': '#326E9B' });
         }
     });
-
-    //SAP 버튼 동작
-    $('.sapIcon').click(function () {
-        $('.wc-console').animate({ 'bottom': 0 + 'px' }, 'fast');
-        $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
-        $('.menuIcon').removeClass('menuIcon').addClass('sapIcon-close');
-        $('.menuIcon_active').removeClass('menuIcon_active').addClass('sapIcon-close');
-        $('.wc-shellinput').attr('placeholder', '용어검색 (일반문의는 x표)').focus();
-        //$('.sapIcon').removeClass('sapIcon').addClass('sapIcon-search');
-        $('.wc-sap').removeClass('off').addClass('on').css({ 'display': 'block' });
-        //$('.sapBtn').removeClass('off').addClass('on');
-        $('.wc-textbox').animate({ 'left': 50 + 'px' }, 'fast');
-        $('.wc-message-groups').css({ 'bottom': 0 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
-    });
+    
     //챗봇 MENU + SAP 버튼 동작
     $('.wc-menu > div').click(function () {
         $('.wc-shellinput').attr('value', '').attr('placeholder', '메세지를 입력하세요').val('').focus();
 
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
-            $('.wc-menu').tooltip('destroy'); //메뉴 선택시 tooptip삭제
+            $('.wc-menu').tooltip('show');
             $('.wc-shellinput').blur();
             $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
-            //$('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
-            $('.wc-console').animate({ 'bottom': 115 + 'px' }, 'fast');
+            //$('.wc-console').animate({ 'bottom': 115 + 'px' }, 'fast');
             $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
-            $('.wc-message-groups').css({ 'bottom': 165 + 'px' });
+            //$('.wc-message-groups').css({ 'bottom': 165 + 'px' });
         } else if ($(this).hasClass('menuIcon_active')) {   //MENU 닫기
+            $('.wc-menu').tooltip('hide');
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
             //$('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
             $('.wc-console').animate({ 'bottom': 0 + 'px' }, 'fast');
@@ -181,3 +175,16 @@ $(function () {
     //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 });
+
+function guideMenuOrgMent(orgMent) {
+    //var v = $(this).text();
+    var v = orgMent;
+    $('div.wc-console').addClass('has-text');
+    $('input[type="text"].wc-shellinput').attr('value', v).val(v);
+    $('label.wc-send').trigger('click');
+    $('input[type="text"].wc-shellinput').attr('value', '').val('').focus();
+    $('.wc-console').removeClass('has-text').animate({ 'bottom': 0 + 'px' }, 'fast');
+    //$('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
+    $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
+    $('.wc-message-groups').css({ 'bottom': 0 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+}
