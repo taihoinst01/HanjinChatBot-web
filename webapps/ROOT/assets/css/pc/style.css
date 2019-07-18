@@ -618,5 +618,6 @@
     background-color: #fff;
     color: #666;
     border-radius: 10px;
-    margin: 5px 5px 5px 5px
+    margin: 5px 5px 5px 5px;
+    cursor: pointer;
 }
