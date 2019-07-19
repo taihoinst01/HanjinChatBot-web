@@ -106,7 +106,9 @@
             $('#guideClose').hide();
         }
 
-        
+        function goNoticePage() {
+            window.open('https://www.hanjin.co.kr/Delivery_html/business/notice_list.jsp','_blank')
+        }
     </script>
     <title>한진택배 인공지능 챗봇</title>
 </head>
@@ -240,9 +242,9 @@
         <font size="15">X</font>
     </div>
     <div id="guideData" class="guide_data off" style="display:none;">
-        <button type="button" class="guideMenu" onclick="guideMenuOrgMent('자주하는질문')">자주하는 질문</button>
-        <button type="button" class="guideMenu">이용가이드</button>
-        <button type="button" class="guideMenu">공지사항</button>
+        <button type="button" class="guideMenu" onclick="guideMenuOrgMent('자주하는질문');">자주하는 질문</button>
+        <button type="button" class="guideMenu" onclick="goShowUserGuideModal();">이용가이드</button>
+        <button type="button" class="guideMenu" onclick="goNoticePage();">공지사항</button>
     </div>
 
 </body>
