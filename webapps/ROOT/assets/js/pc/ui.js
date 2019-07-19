@@ -38,8 +38,7 @@ $(function () {
     $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement', 'top').attr('data-html', 'true').attr('title', '<li class="menuSelectBtn">자주하는 질문</li><br><li class="menuSelectBtn">이용가이드</li><br><li class="menuSelectBtn">공지사항</li>')
         .attr('data-template', '<div class="tooltip tool2" role="tooltip"><div class="tooltip-arrow arrow2"></div><div class="tooltip-inner"></div></div>').tooltip('show');
     */
-    $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement', 'top').attr('data-html', 'true').attr('title', '<button type="button" class="btn btn-default" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; flex: 0 1 auto;" onClick="javascript:guideMenuOrgMent(\'자주하는질문\');">테스트검토</button><li class="guideMenu" onClick="javascript:guideMenuOrgMent(\'자주하는질문\');" style="cursor: pointer;">자주하는 질문</li><br><a href="#" onClick="goShowUserGuideModal()"><li class="guideMenu">이용가이드</li></a><br><a href="https://www.hanjin.co.kr/Delivery_html/business/notice_list.jsp" target="_blank"><li class="guideMenu">공지사항</li></a>')
-        .attr('data-template', '<div class="tooltip tool2" role="tooltip"><div class="tooltip-arrow arrow2"></div><div class="tooltip-inner"></div></div>').tooltip('hide');
+    
     
     
     //챗봇창 상단 생성
@@ -92,6 +91,9 @@ $(function () {
     });
     //menu 이외의 다른 영역 선택시 닫힘
     $('.wc-message-groups, .wc-textbox').click(function () {
+        $('.guide_data').removeClass('on').addClass('off').css({ 'display': 'none' });
+        $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
+        /*
         if ($('.menuBox').hasClass('on')) {
             $('.wc-console').animate({ 'bottom': 0 + 'px' }, 'fast');
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
@@ -104,6 +106,7 @@ $(function () {
         } else {
             $('.wc-shellinput').css({ 'color': '#326E9B' });
         }
+        */
     });
     
     //챗봇 MENU + SAP 버튼 동작
@@ -111,18 +114,18 @@ $(function () {
         $('.wc-shellinput').attr('value', '').attr('placeholder', '메세지를 입력하세요').val('').focus();
 
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
-            $('.wc-menu').tooltip('show');
+            $('.guide_data').removeClass('off').addClass('on').css({ 'display': 'block', 'z-index': '2000' });
             $('.wc-shellinput').blur();
             $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
             //$('.wc-console').animate({ 'bottom': 115 + 'px' }, 'fast');
-            $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
+            //$('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
             //$('.wc-message-groups').css({ 'bottom': 165 + 'px' });
         } else if ($(this).hasClass('menuIcon_active')) {   //MENU 닫기
-            $('.wc-menu').tooltip('hide');
+            $('.guide_data').removeClass('on').addClass('off').css({ 'display': 'none' });
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
             //$('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
             $('.wc-console').animate({ 'bottom': 0 + 'px' }, 'fast');
-            $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
+            //$('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
             $('.wc-message-groups').css({ 'bottom': 0 + 'px' });
         } else if ($(this).hasClass('sapIcon-close')) {    //SAP 닫기
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
@@ -182,12 +185,8 @@ function guideMenuOrgMent(orgMent) {
     $('input[type="text"].wc-shellinput').attr('value', v).val(v);
     $('label.wc-send').trigger('click');
     $('input[type="text"].wc-shellinput').attr('value', '').val('').focus();
-    $('.wc-console').removeClass('has-text').animate({ 'bottom': 0 + 'px' }, 'fast');
-    //$('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
+    //$('.wc-console').removeClass('has-text').animate({ 'bottom': 0 + 'px' }, 'fast');
+    $('.guide_data').removeClass('on').addClass('off').css({ 'display': 'none' });
     $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
-    $('.wc-message-groups').css({ 'bottom': 0 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
-}
-
-function guideMenuOrgMenttest() {
-    alert("asdfasdfdasfadsfdasfdsafdasfdasdfasfsd==========");
+    //$('.wc-message-groups').css({ 'bottom': 0 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
 }

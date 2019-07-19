@@ -303,17 +303,18 @@
     }
 /*.menuSelectBtn{border-top:1px solid #f0f1f4;position:relative;width:20%;height:40px;display:inline-block;padding-top:10px;cursor:pointer;background-color:#3a3a3a;color:#fff;border-radius:15px;margin:5px 10px 10px 5px}*/
 .menuSelectBtn {
-    border: 1px solid #898989;
+    border: 1px solid #3472C5;
     position: relative;
     /*width: 20%;*/
-    height: 40px;
-    display: inline-block;
-    padding: 10px 15px 0;
+    min-height: 32px;
+    width: 70%;
+    margin:0 auto 8px;
+    padding: 0 16px;
     cursor: pointer;
     background-color: #fff;
-    color: #666;
-    border-radius: 20px;
-    margin: 5px 10px 10px 5px
+    color: #3472c5;
+    border-radius: 5px;
+    margin-top: 5px;
 }
 
     .menuSelectBtn > span {
@@ -608,16 +609,23 @@
 }
 
 .guideMenu {
-    border: 1px solid #898989;
+    border: 1px solid #3472C5;
     position: relative;
     /*width: 20%;*/
-    height: 40px;
-    display: inline-block;
-    padding: 10px 15px 0;
+    min-height: 32px;
+    width: 50%;
+    margin: 0 auto 8px;
+    padding: 0 16px;
     cursor: pointer;
     background-color: #fff;
-    color: #666;
-    border-radius: 10px;
-    margin: 5px 5px 5px 5px;
-    cursor: pointer;
+    color: #3472c5;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+
+.guide_data {
+    position: absolute;
+    z-index: 1001;
+    left: 15px;
+    bottom: 50px;
 }
