@@ -111,7 +111,7 @@ $(function () {
     
     //챗봇 MENU + SAP 버튼 동작
     $('.wc-menu > div').click(function () {
-        $('.wc-shellinput').attr('value', '').attr('placeholder', '메세지를 입력하세요').val('').focus();
+        //$('.wc-shellinput').attr('value', '').attr('placeholder', '메세지를 입력하세요').val('').focus();
 
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
             $('.guide_data').removeClass('off').addClass('on').css({ 'display': 'block', 'z-index': '2000' });

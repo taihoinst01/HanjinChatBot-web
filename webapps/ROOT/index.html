@@ -66,6 +66,12 @@
             top: 0px;
         }
 
+        .carousel {
+            width: 100% !important;
+            overflow: hidden !important;
+            right: 0 !important;
+        }
+
     </style>
 
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">-->
@@ -99,6 +105,7 @@
             //$('#userGuideModal').modal('show');
             $('#userGuideDiv').show();
             $('#guideClose').show();
+            $('.guide_data').removeClass('on').addClass('off').css({ 'display': 'none' });
         }
 
         function goHideUserGuideModal() {
@@ -217,7 +224,8 @@
             <!-- The slideshow -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="assets/image/chatbotStyle/new/guide1.png" style="max-width:100%;height: auto;">
+                    <!--<div class="fill" style="background-image:url('assets/image/chatbotStyle/new/guide1.png');"></div>-->
+                    <img src="assets/image/chatbotStyle/new/guide1.png">
                 </div>
                 <div class="item">
                     <img src="assets/image/chatbotStyle/new/guide1.png" style="max-width:100%;height: auto;">
