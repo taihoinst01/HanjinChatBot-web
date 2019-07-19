@@ -184,7 +184,7 @@ function guideMenuOrgMent(orgMent) {
     $('div.wc-console').addClass('has-text');
     $('input[type="text"].wc-shellinput').attr('value', v).val(v);
     $('label.wc-send').trigger('click');
-    $('input[type="text"].wc-shellinput').attr('value', '').val('').focus();
+    //$('input[type="text"].wc-shellinput').attr('value', '').val('').focus();
     //$('.wc-console').removeClass('has-text').animate({ 'bottom': 0 + 'px' }, 'fast');
     $('.guide_data').removeClass('on').addClass('off').css({ 'display': 'none' });
     $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
