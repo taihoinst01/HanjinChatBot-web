@@ -19,11 +19,12 @@
 /* chat TOP */
 .chatTitle {
     background: url("../../image/chatbotStyle/new/title_sub.png") no-repeat;
-    background-size: 200px 32px;
-    height: 48px;
-    width: 300px;
+    background-size: 220px 25px;
+    height: 25px;
+    width: 334px;
     display: inline-block;
     background-position: center center;
+    margin-top: 10px;
 }
 
 .chatTitleText {
@@ -239,10 +240,10 @@
 /*.sendIcon{background: url("../../image/chatbotStyle/btn_red.png") no-repeat; width:35px;height:35px;margin:8px}*/ /*이미지용*/
 .sendIcon {
     background: url("../../image/chatbotStyle/new/btn_send.png") no-repeat;
-    background-size: 28px 24px;
-    width: 28px;
-    height: 24px;
-    margin: 13px 10px
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    /*margin: 13px 10px*/
 }
 /* .sendIcon:hover{background: url("../../image/chatbotStyle/btn_send_h.png") no-repeat;background-size:35px 35px; width:35px;height:35px;margin:8px} */
 
@@ -267,7 +268,7 @@
 }
 
 .menuIcon {
-    background: url("../../image/chatbotStyle/plus.png") no-repeat 50% 50%;
+    background: url("../../image/chatbotStyle/new/btn_open.png") no-repeat 50% 50%;
     background-size: 35px 35px;
     width: 35px;
     height: 35px;
@@ -279,7 +280,7 @@
 .menuIcon:hover{background: url("../../image/chatbotStyle/plus02h.png") no-repeat 50% 50%;background-size:35px 35px; width:50px;height:50px;cursor:pointer}
 */
 .menuIcon_active {
-    background: url("../../image/chatbotStyle/close02.png") no-repeat 50% 50%;
+    background: url("../../image/chatbotStyle/new/btn_close.png") no-repeat 50% 50%;
     background-size: 35px 35px;
     width: 35px;
     height: 35px;
