@@ -70,13 +70,13 @@
             bottom: 0px;
         }
 
-       .carousel, .item, .active {
+        .carousel-inner, .carousel, .item, .container, .fill {
             height: 100%;
-        }
-
-        .carousel-inner {
-            height: 100%;
-        }
+            width: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed !important;
+            background-size: cover !important;
+            background-position: center !important;
 
         
 
@@ -129,11 +129,12 @@
     <title>한진택배 인공지능 챗봇</title>
 </head>
 <body onload="goShowUserGuideModal();">
+
     <input type="hidden" id="conversationId">
 
     <!--<input type="hidden" id="cjworld_id_get" value="g1USFCLOzaxOXvfee/4yzvvuG1gyo4iW"/>
     <input type="hidden" id="cjworld_id_post" value="g1USFCLOzaxOXvfee/4yzvvuG1gyo4iW"/>-->
-    <div class="wrapper>
+    <div class="wrapper">
         <div class="mainBG">
             <!-- 여기서 부터 -->
             <div class="bot-wrap chatOn">
@@ -234,13 +235,16 @@
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
                     <!--<img src="assets/image/chatbotStyle/new/guide1.png" style="max-width:100%;height: auto;">-->
-                    <img src="assets/image/chatbotStyle/new/guide1.png" class="img-responsive" id="guide1">
+                    <!--<img src="assets/image/chatbotStyle/new/guide1.png" class="img-responsive" id="guide1">-->
+                    <div class="fill" style="background-image:url('assets/image/chatbotStyle/new/guide1.png');"></div>
                 </div>
                 <div class="item">
-                    <img src="assets/image/chatbotStyle/new/guide2.png" class="img-responsive" id="guide2">
+                    <!--<img src="assets/image/chatbotStyle/new/guide2.png" class="img-responsive" id="guide2">-->
+                    <div class="fill" style="background-image:url('assets/image/chatbotStyle/new/guide2.png');"></div>
                 </div>
                 <div class="item">
-                    <img src="assets/image/chatbotStyle/new/guide3.png" class="img-responsive" id="guide3">
+                    <!--<img src="assets/image/chatbotStyle/new/guide3.png" class="img-responsive" id="guide3">-->
+                    <div class="fill" style="background-image:url('assets/image/chatbotStyle/new/guide3.png');"></div>
                 </div>
             </div>
 
