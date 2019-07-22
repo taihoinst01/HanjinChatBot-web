@@ -595,7 +595,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
         color: #fff;
         /*text-align:center;*/
         border-radius: 8px 8px 0 0;
-        background-color: #3472c5
+        background-color: #3472c5;
+        display: none;
     }
     .wc-carousel-item .wc-card #wIcon01 {
         display: inline-block;

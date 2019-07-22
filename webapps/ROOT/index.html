@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="assets/css/jquery-ui.css" />
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css" />
-    
+
     <link rel="stylesheet" href="assets/css/common.css" />
     <link rel="stylesheet" href="assets/css/pc/botchat.css" />
     <link rel="stylesheet" href="assets/css/pc/style.css" />
@@ -78,7 +78,6 @@
             background-size: cover !important;
             background-position: center !important;
         }
-
     </style>
 
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">-->
@@ -91,6 +90,7 @@
     <script type="text/javascript" src="assets/js/pc/ui.js"></script>
     <script type="text/javascript" src="assets/js/pc/autocompleteword.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
     <script>
         function goShowUseReportModal() {
             $('#consultingModal').modal('show');
@@ -106,6 +106,18 @@
             });
 
             //$('#userGuideDiv').hide();
+
+            $(".carousel").swipe({
+
+                swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+
+                    if (direction == 'left') $(this).carousel('next');
+                    if (direction == 'right') $(this).carousel('prev');
+
+                },
+                allowPageScroll: "vertical"
+
+            });
         });
 
         function goShowUserGuideModal() {
@@ -122,8 +134,9 @@
         }
 
         function goNoticePage() {
-            window.open('https://www.hanjin.co.kr/Delivery_html/business/notice_list.jsp','_blank')
+            window.open('https://www.hanjin.co.kr/Delivery_html/business/notice_list.jsp', '_blank')
         }
+
     </script>
     <title>한진택배 인공지능 챗봇</title>
 </head>
