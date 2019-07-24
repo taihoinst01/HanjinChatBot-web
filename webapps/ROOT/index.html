@@ -60,7 +60,8 @@
             left: 0px;
             z-index: 555;
             height: 100%;
-            width: 100%
+            width: 100%;
+            background-color: white;
         }
 
         .guideOver {
@@ -68,6 +69,8 @@
             z-index: 1001;
             right: 15px;
             bottom: 0px;
+            font-size: 40px;
+            color: white;
         }
 
         .carousel-inner, .carousel, .item, .container, .fill {
@@ -311,9 +314,7 @@
             </a>
         </div>
     </div>
-    <div id="guideClose" class="guideOver" onclick="goHideUserGuideModal();" style="display:none;">
-        <font size="7" color="white">X</font>
-    </div>
+    <div id="guideClose" class="guideOver" onclick="goHideUserGuideModal();" style="display:none;">X</div>
     <div id="guideData" class="guide_data off" style="display:none;">
         <button type="button" class="guideMenu" onclick="guideMenuOrgMent('자주하는질문');">자주하는 질문</button>
         <button type="button" class="guideMenu" onclick="goShowUserGuideModal();">이용가이드</button>
