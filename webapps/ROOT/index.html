@@ -133,16 +133,29 @@
 
             if (varUA.match('android') != null) {
                 //안드로이드 일때 처리
-                
-
+                $('#intro').css('background-image', 'url(assets/image/chatbotStyle/new/guide/introa.png)');
+                $('#guide1').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide1a.png)');
+                $('#guide2').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide2a.png)');
+                $('#guide3').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide3a.png)');
+                $('#guide4').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide4a.png)');
+                $('#guide5').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide5a.png)');
             } else if (varUA.indexOf("iphone") > -1 || varUA.indexOf("ipad") > -1 || varUA.indexOf("ipod") > -1) {
                 //IOS 일때 처리
                 
-
+                $('#intro').css('background-image', 'url(assets/image/chatbotStyle/new/guide/introi.png)');
+                $('#guide1').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide1i.png)');
+                $('#guide2').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide2i.png)');
+                $('#guide3').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide3i.png)');
+                $('#guide4').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide4i.png)');
+                $('#guide5').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide5i.png)');
             } else {
-
                 //아이폰, 안드로이드 외 처리
-                
+                $('#intro').css('background-image', 'url(assets/image/chatbotStyle/new/guide/introa.png)');
+                $('#guide1').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide1a.png)');
+                $('#guide2').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide2a.png)');
+                $('#guide3').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide3a.png)');
+                $('#guide4').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide4a.png)');
+                $('#guide5').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide5a.png)');
             }
         }
 
@@ -266,15 +279,23 @@
                 <div class="item active">
                     <!--<img src="assets/image/chatbotStyle/new/guide1.png" style="max-width:100%;height: auto;">-->
                     <!--<img src="assets/image/chatbotStyle/new/guide1.png" class="img-responsive" id="guide1">-->
-                    <div class="fill" style="background-image:url('assets/image/chatbotStyle/new/guide1.png');"></div>
+                    <!--<div class="fill" style="background-image:url('assets/image/chatbotStyle/new/guide1.png');"></div>-->
+                    <div class="fill" id="intro"></div>
                 </div>
                 <div class="item">
-                    <!--<img src="assets/image/chatbotStyle/new/guide2.png" class="img-responsive" id="guide2">-->
-                    <div class="fill" style="background-image:url('assets/image/chatbotStyle/new/guide2_1.png');"></div>
+                    <div class="fill" id="guide1"></div>
                 </div>
                 <div class="item">
-                    <!--<img src="assets/image/chatbotStyle/new/guide3.png" class="img-responsive" id="guide3">-->
-                    <div class="fill" style="background-image:url('assets/image/chatbotStyle/new/guide3.png');"></div>
+                    <div class="fill" id="guide2"></div>
+                </div>
+                <div class="item">
+                    <div class="fill" id="guide3"></div>
+                </div>
+                <div class="item">
+                    <div class="fill" id="guide4"></div>
+                </div>
+                <div class="item">
+                    <div class="fill" id="guide5"></div>
                 </div>
             </div>
 
