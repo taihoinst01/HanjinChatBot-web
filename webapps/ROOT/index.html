@@ -169,6 +169,9 @@
                 $('#guide4').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide4a.png)');
                 $('#guide5').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide5a.png)');
             }
+
+            var st_date = new Date().toISOString().substr(0, 10).replace('T', ' ');
+            $('#todayShow').text(st_date);
         }
 
         function goHideUserGuideModal() {

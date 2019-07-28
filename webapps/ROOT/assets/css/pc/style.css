@@ -21,10 +21,16 @@
     background: url("../../image/chatbotStyle/new/title_sub.png") no-repeat;
     background-size: 220px 20px;
     height: 25px;
-    width: 334px;
+    width: 220px;
     display: inline-block;
-    background-position: center center;
+    background-position: left;
     margin-top: 10px;
+    margin-left: 80px;
+}
+
+.todayShowClass {
+    margin-left: 20px;
+    font-size: 10px;
 }
 
 .chatTitleText {

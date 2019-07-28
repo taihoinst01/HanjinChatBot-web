@@ -47,7 +47,8 @@ $(function () {
         //"<div class='over' style='position:absolute;margin-top:15px;margin-left:10px;'><button onClick='goShowUseReportModal()'>상담종료</button></div>" +
         //<div class='over' style='position:absolute;margin-top:15px;margin-left:80px;'><button onClick='goShowUserGuideModal()'>가이드</button></div>" +
         //"<span class='chatTitleText' style='border: 0px solid gold; float:left; width:60%;'>한진택배 ChatBot</span>"
-        "<span class='chatTitle'></span>"
+        "<span class='chatTitle'></span>"+
+        "<span class='todayShowClass' id='todayShow'></span>"
     ).appendTo(".wc-header");
 
     //챗봇 SAP Btn 생성
