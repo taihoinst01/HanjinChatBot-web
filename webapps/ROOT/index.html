@@ -69,7 +69,7 @@
             z-index: 1001;
             right: 15px;
             bottom: 0px;
-            font-size: 40px;
+            font-size: 35px;
             color: white;
         }
 
@@ -80,6 +80,15 @@
             background-attachment: fixed !important;
             background-size: cover !important;
             background-position: center !important;
+        }
+
+        .top_button {
+            position: fixed;
+            z-index: 1001;
+            right: 5px;
+            bottom: 50px;
+            font-size: 35px;
+            color: black;
         }
     </style>
 
@@ -319,6 +328,9 @@
         <button type="button" class="guideMenu" onclick="guideMenuOrgMent('자주하는질문');">자주하는 질문</button>
         <button type="button" class="guideMenu" onclick="goShowUserGuideModal();">이용가이드</button>
         <button type="button" class="guideMenu" onclick="goNoticePage();">공지사항</button>
+    </div>
+    <div id="topButton" class="top_button" style="display:none;z-index:10">
+        <button type="button" class="guideMenu" onclick="">TOP</button>
     </div>
 
 </body>

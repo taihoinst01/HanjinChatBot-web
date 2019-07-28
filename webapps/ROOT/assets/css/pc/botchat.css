@@ -51,7 +51,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     left: 0;
     letter-spacing: 0.5px;
     /*padding: 16px 8px 0 8px;*/
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     z-index: 1;
