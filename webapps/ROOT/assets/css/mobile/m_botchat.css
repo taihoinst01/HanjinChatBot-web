@@ -1,7 +1,6 @@
 ﻿/* reset */
 body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
-    /*font-family: "Nanum Gothic", sans-serif;*/
-    font-family: 'CJONLYONENEWbodyRegular'; /*KSO CJ font*/
+    font-family: "Nanum Gothic", sans-serif;
     font-size: 14px;
 }
 

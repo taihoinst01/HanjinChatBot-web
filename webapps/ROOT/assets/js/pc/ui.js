@@ -42,6 +42,9 @@ $(function () {
     
     
     //챗봇창 상단 생성
+    $(".wc-header > div").add(
+        "<div class='todayShowClass' id='todayShow'></div>"
+    ).appendTo(".wc-header");
     $(".wc-header > span").add(
         "<div class='over' style='position:absolute;margin-top:10px;margin-left:10px;'><img src='assets/image/chatbotStyle/new/btn_chatend.png' width='70px' height='28px' onClick='goShowUseReportModal()'></div>" +
         //"<div class='over' style='position:absolute;margin-top:15px;margin-left:10px;'><button onClick='goShowUseReportModal()'>상담종료</button></div>" +
@@ -50,6 +53,7 @@ $(function () {
         "<span class='chatTitle'></span>"+
         "<span class='todayShowClass' id='todayShow'></span>"
     ).appendTo(".wc-header");
+   
 
     //챗봇 SAP Btn 생성
     $(".wc-chatview-panel > div").add(

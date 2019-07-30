@@ -170,7 +170,20 @@
                 $('#guide5').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide5a.png)');
             }
 
-            var st_date = new Date().toISOString().substr(0, 10).replace('T', ' ');
+            //var st_date = new Date().toISOString().substr(0, 10).replace('T', ' ');
+            
+            var dt = new Date();
+
+            var recentYear = dt.getFullYear();
+            var recentMonth = dt.getMonth() + 1;
+            var recentDay = dt.getDate();
+            var week_data = new Array('일', '월', '화', '수', '목', '금', '토');
+            var week_string = week_data[dt.getDay()];
+
+            if (recentMonth < 10) recentMonth = "0" + recentMonth;
+            if (recentDay < 10) recentDay = "0" + recentDay;
+
+            var st_date = recentYear + "년 " + recentMonth + "월 " + recentDay + "일 " + week_string+"요일";
             $('#todayShow').text(st_date);
         }
 

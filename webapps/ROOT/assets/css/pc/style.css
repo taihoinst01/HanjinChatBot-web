@@ -29,8 +29,14 @@
 }
 
 .todayShowClass {
-    margin-left: 20px;
+    position: absolute;
     font-size: 10px;
+    font-weight: bold;
+    color: #666;
+    margin-top: 40px;
+    right: 10px;
+    text-align: right;
+    width: 100%;
 }
 
 .chatTitleText {
@@ -508,7 +514,7 @@
 
 /* tooltip */
 .tooltip {
-    font-family: 'CJONLYONENEWbodyRegular'
+    /*font-family: 'CJONLYONENEWbodyRegular'*/
 }
 
     .tooltip.top .tooltip-arrow {

@@ -96,8 +96,9 @@
     height: calc(100% - 300px);
 }
 
-/* tooltip */
+/* tooltip 
 .tooltip{font-family:'CJONLYONENEWbodyRegular'}
 .tooltip.top .tooltip-arrow{border-top-color:#326E9B}
 .tooltip-inner{background-color:#326E9B;padding:8px 3px}
 .tool2{left:-45px !important}
+    */
