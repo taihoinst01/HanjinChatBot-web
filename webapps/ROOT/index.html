@@ -184,7 +184,7 @@
             if (recentDay < 10) recentDay = "0" + recentDay;
 
             var st_date = recentYear + "년 " + recentMonth + "월 " + recentDay + "일 " + week_string+"요일";
-            $('#todayShow').text(st_date);
+            $('.todayShowClass').text(st_date);
         }
 
         function goHideUserGuideModal() {
@@ -267,8 +267,8 @@
 
                 <div class="modal-footer">
                     <button type="button" name="button" class="btn btn-primary" onclick="consultingReportConnection()">보내기</button>
-                    <!--<button type="button" name="button" class="btn btn-color2" data-dismiss="modal">닫기</button>-->
-                    <button type="button" name="button" class="btn btn-primary" onclick="return self.close();">닫기</button>
+                    <button type="button" name="button" class="btn btn-color2" data-dismiss="modal">닫기</button>
+                    <!--<button type="button" name="button" class="btn btn-primary" onclick="return self.close();">닫기</button>-->
                 </div>
 
             </div>
@@ -332,10 +332,10 @@
 
             <!-- Left and right controls -->
             <a class="left carousel-control" href="#userGuideDiv" role="button" data-slide="prev" style="background:none !important">
-                <div id="chatleft"><font size="15" color="black" style="position:absolute; top:50%; left:10px;"><<</font></div>
+                <div id="chatleft"><font color="black" style="position:absolute; top:50%; left:10px; font-size"><<</font></div>
             </a>
             <a class="right carousel-control" href="#userGuideDiv" role="button" data-slide="next" style="background:none !important">
-                <div id="chatRight"><font size="15" color="black" style="position:absolute; top:50%; right:10px;">>></font></div>
+                <div id="chatRight"><font color="black" style="position:absolute; top:50%; right:10px;">>></font></div>
             </a>
         </div>
     </div>
