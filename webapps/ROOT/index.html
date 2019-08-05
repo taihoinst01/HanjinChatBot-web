@@ -68,7 +68,7 @@
             position: fixed;
             z-index: 1001;
             right: 15px;
-            bottom: 0px;
+            top: 10px;
             font-size: 35px;
             color: white;
         }
@@ -129,6 +129,11 @@
                 },
                 allowPageScroll: "vertical"
 
+            });
+
+            $(".modal .btn_todayClose").click(function () {
+                setCookieMobile("todayCookie", "done", 1);
+                $(".modal").hide();
             });
 
         });
@@ -195,6 +200,22 @@
         function goNoticePage() {
             window.open('https://www.hanjin.co.kr/Delivery_html/business/notice_list.jsp', '_blank')
         }
+
+        function setCookieMobile(name, value, expiredays) {
+            var todayDate = new Date();
+            todayDate.setDate(todayDate.getDate() + expiredays);
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+        }
+        function getCookieMobile() {
+            var cookiedata = document.cookie;
+            if (cookiedata.indexOf("todayCookier=done") < 0) {
+                $(".modal").show();
+            }
+            else {
+                $(".modal").hide();
+            }
+        }
+        getCookieMobile();
 
     </script>
     <title>한진택배 인공지능 챗봇</title>
@@ -339,7 +360,7 @@
             </a>
         </div>
     </div>
-    <div id="guideClose" class="guideOver" onclick="goHideUserGuideModal();" style="display:none;">X</div>
+    <div id="guideClose" class="guideOver" onclick="goHideUserGuideModal();" style="display:none;"><img src="assets/image/chatbotStyle/close_btn.png" /></div>
     <div id="guideData" class="guide_data off" style="display:none;">
         <button type="button" class="guideMenu" onclick="guideMenuOrgMent('자주하는질문');">자주하는 질문</button>
         <button type="button" class="guideMenu" onclick="goShowUserGuideModal();">이용가이드</button>
