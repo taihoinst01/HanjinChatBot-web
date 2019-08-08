@@ -205,19 +205,12 @@
         }
 
         function setCookieMobile(name, value, expiredays) {
-            alert("name====" + name);
-            alert("value====" + value);
-            alert("expiredays====" + expiredays);
             var todayDate = new Date();
             todayDate.setDate(todayDate.getDate() + expiredays);
-            alert("todayDate.toGMTString()====" + todayDate.toGMTString());
             document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + "; domain=hanjinchatbot-web.azurewebsites.net";
-            alert("document.cookie==" + document.cookie);
         }
         function getCookieMobile() {
             var cookiedata = document.cookie;
-            alert("cookiedata==" + cookiedata);
-            alert("indexOf==" + cookiedata.indexOf("todayCookie=done"));
             if (cookiedata.indexOf("todayCookie=done") < 0) {
                 alert("show==");
                 $(".noshow_button").show();
@@ -226,8 +219,7 @@
             else {
                 alert("hide==");
                 $(".noshow_button").hide();
-                $('#userGuideDiv').hide();
-                $('#guideClose').hide();
+                goHideUserGuideModal();
             }
         }
         getCookieMobile();
