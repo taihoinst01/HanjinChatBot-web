@@ -222,12 +222,17 @@
                 goHideUserGuideModal();
             }
         }
-        getCookieMobile();
+
+        function deleteCookie() {
+            document.cookie = 'todayCookie=; expires=Thu, 01 Jan 1999 00:00:10 GMT;';
+        }
+        //getCookieMobile();
+        deleteCookie();
 
     </script>
     <title>한진택배 인공지능 챗봇</title>
 </head>
-<body>
+<body onload="goShowUserGuideModal();">
 
     <input type="hidden" id="conversationId">
 
