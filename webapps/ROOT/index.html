@@ -221,8 +221,7 @@
             if (cookiedata.indexOf("todayCookie=done") < 0) {
                 alert("show==");
                 $(".noshow_button").show();
-                $('#userGuideDiv').show();
-                $('#guideClose').show();
+                goShowUserGuideModal();
             }
             else {
                 alert("hide==");
@@ -236,7 +235,7 @@
     </script>
     <title>한진택배 인공지능 챗봇</title>
 </head>
-<body onload="goShowUserGuideModal();">
+<body">
 
     <input type="hidden" id="conversationId">
 
