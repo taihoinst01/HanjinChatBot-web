@@ -73,6 +73,15 @@
             color: white;
         }
 
+        .noshow_button {
+            position: fixed;
+            z-index: 1001;
+            right: 15px;
+            bottom: 30px;
+            font-size: 10px;
+            color: black;
+        }
+
         .carousel-inner, .carousel, .item, .container, .fill {
             height: 100%;
             width: 100%;
@@ -82,14 +91,6 @@
             background-position: center !important;
         }
 
-        .top_button {
-            position: fixed;
-            z-index: 1001;
-            right: 5px;
-            bottom: 50px;
-            font-size: 35px;
-            color: black;
-        }
     </style>
 
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">-->
@@ -131,9 +132,11 @@
 
             });
 
-            $(".modal .btn_todayClose").click(function () {
+            $(".noshow_button .btn_todayClose").click(function () {
                 setCookieMobile("todayCookie", "done", 1);
-                $(".modal").hide();
+                $(".noshow_button").hide();
+                $('#userGuideDiv').hide();
+                $('#guideClose').hide();
             });
 
         });
@@ -202,17 +205,27 @@
         }
 
         function setCookieMobile(name, value, expiredays) {
+            alert("name====" + name);
+            alert("value====" + value);
+            alert("expiredays====" + expiredays);
             var todayDate = new Date();
             todayDate.setDate(todayDate.getDate() + expiredays);
-            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+            alert("todayDate.toGMTString()====" + todayDate.toGMTString());
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + "; domain=hanjinchatbot-web.azurewebsites.net";
+            alert("document.cookie==" + document.cookie);
         }
         function getCookieMobile() {
             var cookiedata = document.cookie;
+            alert("cookiedata==" + cookiedata);
             if (cookiedata.indexOf("todayCookier=done") < 0) {
-                $(".modal").show();
+                $(".noshow_button").show();
+                $('#userGuideDiv').show();
+                $('#guideClose').show();
             }
             else {
-                $(".modal").hide();
+                $(".noshow_button").hide();
+                $('#userGuideDiv').hide();
+                $('#guideClose').hide();
             }
         }
         getCookieMobile();
@@ -288,7 +301,7 @@
 
                 <div class="modal-footer">
                     <button type="button" name="button" class="btn btn-primary" onclick="consultingReportConnection()">보내기</button>
-                    <button type="button" name="button" class="btn btn-color2" data-dismiss="modal">닫기</button>
+                    <button type="button" name="button" class="btn btn-primary" data-dismiss="modal">닫기</button>
                     <!--<button type="button" name="button" class="btn btn-primary" onclick="return self.close();">닫기</button>-->
                 </div>
 
@@ -366,9 +379,8 @@
         <button type="button" class="guideMenu" onclick="goShowUserGuideModal();">이용가이드</button>
         <button type="button" class="guideMenu" onclick="goNoticePage();">공지사항</button>
     </div>
-    <div id="topButton" class="top_button" style="display:none;z-index:10">
-        <button type="button" class="guideMenu" onclick="">TOP</button>
-    </div>
+    
+    <div class="noshow_button"><a href="javascript:;" class="btn_todayClose">오늘하루열지않음</a></div>
 
 </body>
 </html>
