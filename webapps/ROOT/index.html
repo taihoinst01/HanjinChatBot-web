@@ -217,6 +217,7 @@
         function getCookieMobile() {
             var cookiedata = document.cookie;
             alert("cookiedata==" + cookiedata);
+            alert("indexOf==" + cookiedata.indexOf("todayCookie=done"));
             if (cookiedata.indexOf("todayCookie=done") < 0) {
                 $(".noshow_button").show();
                 $('#userGuideDiv').show();
