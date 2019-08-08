@@ -219,11 +219,13 @@
             alert("cookiedata==" + cookiedata);
             alert("indexOf==" + cookiedata.indexOf("todayCookie=done"));
             if (cookiedata.indexOf("todayCookie=done") < 0) {
+                alert("show==");
                 $(".noshow_button").show();
                 $('#userGuideDiv').show();
                 $('#guideClose').show();
             }
             else {
+                alert("hide==");
                 $(".noshow_button").hide();
                 $('#userGuideDiv').hide();
                 $('#guideClose').hide();
