@@ -77,8 +77,8 @@
             position: fixed;
             z-index: 1001;
             right: 15px;
-            bottom: 30px;
-            font-size: 10px;
+            bottom: 15px;
+            font-size: 11px;
             color: black;
         }
 
@@ -90,7 +90,6 @@
             background-size: cover !important;
             background-position: center !important;
         }
-
     </style>
 
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">-->
@@ -161,7 +160,7 @@
                 $('#guide5').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide5a.png)');
             } else if (varUA.indexOf("iphone") > -1 || varUA.indexOf("ipad") > -1 || varUA.indexOf("ipod") > -1) {
                 //IOS 일때 처리
-                
+
                 $('#intro').css('background-image', 'url(assets/image/chatbotStyle/new/guide/introi.png)');
                 $('#guide1').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide1i.png)');
                 $('#guide2').css('background-image', 'url(assets/image/chatbotStyle/new/guide/guide2i.png)');
@@ -179,7 +178,7 @@
             }
 
             //var st_date = new Date().toISOString().substr(0, 10).replace('T', ' ');
-            
+
             var dt = new Date();
 
             var recentYear = dt.getFullYear();
@@ -191,7 +190,7 @@
             if (recentMonth < 10) recentMonth = "0" + recentMonth;
             if (recentDay < 10) recentDay = "0" + recentDay;
 
-            var st_date = recentYear + "년 " + recentMonth + "월 " + recentDay + "일 " + week_string+"요일";
+            var st_date = recentYear + "년 " + recentMonth + "월 " + recentDay + "일 " + week_string + "요일";
             $('.todayShowClass').text(st_date);
         }
 
@@ -207,17 +206,19 @@
         function setCookieMobile(name, value, expiredays) {
             var todayDate = new Date();
             todayDate.setDate(todayDate.getDate() + expiredays);
-            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + "; domain=hanjinchatbot-web.azurewebsites.net";
+            //document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + "; domain=hanjinchatbot-web.azurewebsites.net";
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString();
         }
         function getCookieMobile() {
             var cookiedata = document.cookie;
-            if (cookiedata.indexOf("todayCookie=done") < 0) {
-                alert("show==");
+            if (cookiedata == null) {
+                goShowUserGuideModal();
+            }
+            else if (cookiedata.indexOf("todayCookie=done") < 0) {
                 $(".noshow_button").show();
                 goShowUserGuideModal();
             }
             else {
-                alert("hide==");
                 $(".noshow_button").hide();
                 goHideUserGuideModal();
             }
@@ -227,13 +228,13 @@
             document.cookie = 'todayCookie=; expires=Thu, 01 Jan 1999 00:00:10 GMT;';
         }
         //getCookieMobile();
-        deleteCookie();
-
+        //deleteCookie();
+        
     </script>
     <title>한진택배 인공지능 챗봇</title>
 </head>
-<body onload="goShowUserGuideModal();">
-
+<!--<body onload="goShowUserGuideModal();">-->
+<body onload="getCookieMobile();">
     <input type="hidden" id="conversationId">
 
     <!--<input type="hidden" id="cjworld_id_get" value="g1USFCLOzaxOXvfee/4yzvvuG1gyo4iW"/>
@@ -379,7 +380,7 @@
         <button type="button" class="guideMenu" onclick="goNoticePage();">공지사항</button>
     </div>
 
-    <!--<div class="noshow_button"><a href="javascript:;" class="btn_todayClose">오늘하루열지않음</a></div>-->
+    <div class="noshow_button"><a href="javascript:;" class="btn_todayClose"><strong>×</strong> 오늘하루열지않음</a></div>
 
 </body>
 </html>
