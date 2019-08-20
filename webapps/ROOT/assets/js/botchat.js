@@ -21168,7 +21168,7 @@ function telConnection() {
     var pos;
     
     //pos = "tel:" + getParameterByName("tel");
-    pos = "hsc:" + getParameterByName("tel");
+    pos = "hsc:" + getParameterByName("hsc");
     
     var settings = {
         "async": true,
