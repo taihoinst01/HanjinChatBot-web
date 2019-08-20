@@ -7758,6 +7758,8 @@ var deviceChk;
 
                             if (telCheck == "tel:" || consultCheck == "consulting:") {
                                 telFlag = 1;
+                            } else if (telCheck == "hsc:") {
+                                telFlag = 1;
                             } else {
                                 telFlag = 0;
                             }
@@ -7765,8 +7767,6 @@ var deviceChk;
                             telFlag = 0;
                         }
                         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
-                        console.log("telCheck===" + telCheck + "<br>");
-                        console.log("startFlag===" + startFlag + "<br>telFlag=====" + telFlag);
                         
                         if (startFlag == 1 && telFlag == 1) {
                             return o.createElement("div", {
@@ -21167,8 +21167,8 @@ function telConnection() {
     //sso form 값
     var pos;
     
-    //pos = "tel:ABDDERFSDVD";
-    pos = "tel:" + getParameterByName("tel");
+    //pos = "tel:" + getParameterByName("tel");
+    pos = "hsc:" + getParameterByName("tel");
     
     var settings = {
         "async": true,
