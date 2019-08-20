@@ -21167,8 +21167,8 @@ function telConnection() {
     //sso form 값
     var pos;
     
-    //pos = "tel:" + getParameterByName("tel");
-    pos = "hsc:" + getParameterByName("hsc");
+    pos = "tel:" + getParameterByName("tel");
+    //pos = "hsc:" + getParameterByName("hsc");
     
     var settings = {
         "async": true,
