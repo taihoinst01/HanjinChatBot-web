@@ -21168,8 +21168,8 @@ function telConnection() {
     var pos;
     var pos2;
     
-    pos = "tel:" + getParameterByName("tel");
-    //pos = "hsc:" + getParameterByName("hsc");
+    //pos = "tel:" + getParameterByName("tel");
+    pos = "hsc:" + getParameterByName("hsc");
     if (getParameterByName("hdw") == null || getParameterByName("hdw") == "") {
 
     } else {

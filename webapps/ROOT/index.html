@@ -223,6 +223,17 @@
                 $(".noshow_button").hide();
                 goHideUserGuideModal();
             }
+            //주소창에 &hdw: 가 있는지 검사해서 있으면 모달창 안 보이기
+            var urlText = window.location.href;
+            var hdwCheck = urlText.indexOf("&hdw:");
+
+            if (hdwCheck == -1) {
+                
+            } else {
+                $(".noshow_button").hide();
+                goHideUserGuideModal();
+            }
+
         }
 
         function deleteCookie() {
