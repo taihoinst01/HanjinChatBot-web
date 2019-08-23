@@ -21166,9 +21166,16 @@ function ssoConnection() {
 function telConnection() {
     //sso form 값
     var pos;
+    var pos2;
     
     pos = "tel:" + getParameterByName("tel");
     //pos = "hsc:" + getParameterByName("hsc");
+    if (getParameterByName("hdw") == null || getParameterByName("hdw") == "") {
+
+    } else {
+        pos2 = "hdw:" + getParameterByName("hdw");
+        pos = pos + "&" + pos2;
+    }
     
     var settings = {
         "async": true,
@@ -21227,5 +21234,6 @@ function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + ":([^&#]*)"),
         results = regex.exec(location.search);
+    
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
