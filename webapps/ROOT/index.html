@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/common.css" />
     <link rel="stylesheet" href="assets/css/pc/botchat.css" />
     <link rel="stylesheet" href="assets/css/pc/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
     <style>
         html, body {
             height: 100%;
@@ -90,6 +91,25 @@
             background-size: cover !important;
             background-position: center !important;
         }
+
+        .scrolltop {
+            display: none;
+            position: fixed;
+            right: 15px;
+            bottom: 50px;
+            z-index: 1030;
+            /*font-size: 1.875rem;*/
+            font-size: 2.075rem;
+            color: #868e96;
+            transition: all 0.5s ease-in-out;
+            opacity: 0.8;
+        }
+
+            .scrolltop:hover,
+            .scrolltop:focus {
+                color: #dc3545;
+                transition: all 0.5s ease-in-out;
+            }
     </style>
 
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">-->
@@ -107,6 +127,7 @@
         function goShowUseReportModal() {
             $('#consultingModal').modal('show');
             $("#consulting_report")[0].reset();
+            $('#backToTop').fadeIn(500);
         }
 
         $(document).ready(function () {
@@ -136,6 +157,7 @@
                 $(".noshow_button").hide();
                 $('#userGuideDiv').hide();
                 $('#guideClose').hide();
+                $('#backToTop').fadeIn(500);
             });
 
         });
@@ -144,6 +166,7 @@
             //$('#userGuideModal').modal('show');
             $('#userGuideDiv').show();
             $('#guideClose').show();
+            $('#backToTop').hide();
             $('.guide_data').removeClass('on').addClass('off').css({ 'display': 'none' });
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
 
@@ -198,6 +221,7 @@
             $('#userGuideDiv').hide();
             $('#guideClose').hide();
             $(".noshow_button").hide();
+            $('#backToTop').fadeIn(500);
         }
 
         function goNoticePage() {
@@ -228,7 +252,7 @@
             var hdwCheck = urlText.indexOf("&hdw:");
 
             if (hdwCheck == -1) {
-                
+
             } else {
                 $(".noshow_button").hide();
                 goHideUserGuideModal();
@@ -241,7 +265,7 @@
         }
         //getCookieMobile();
         //deleteCookie();
-        
+
     </script>
     <title>한진택배 인공지능 챗봇</title>
 </head>
@@ -392,9 +416,24 @@
         <button type="button" class="guideMenu" onclick="goNoticePage();">공지사항</button>
     </div>
 
-    <div class="noshow_button"><a href="javascript:;" class="btn_todayClose"><img src="assets/image/chatbotStyle/close-640.png" style="width: 30px;"/> 오늘하루열지않음</a></div>
+    <div class="noshow_button"><a href="javascript:;" class="btn_todayClose"><img src="assets/image/chatbotStyle/close-640.png" style="width: 30px;" /> 오늘하루열지않음</a></div>
 
-    <!--<div class="top_button"><a href="javascript:;" class="btn_top"><strong>×</strong> TOP</a></div>-->
+    <a id="backToTop" class="scrolltop" href="#">
+        <i class="fas fa-chevron-circle-up"></i>
+    </a>
+    
+    <script>
+        jQuery(document).ready(function () {
+            //$('#backToTop').fadeIn(500);
+
+            $('#backToTop').click(function (e) {
+                e.preventDefault();
+                $('.wc-message-groups').animate({ scrollTop: 0 }, 200);
+                //$('.wc-message-groups').scrollTop(0);
+               
+            });
+        });
+    </script>
 
 </body>
 </html>
