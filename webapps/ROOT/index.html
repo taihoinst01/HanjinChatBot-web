@@ -273,7 +273,8 @@
         //deleteCookie();
 
         function chatbotClose() {
-            window.open('', '_self', '');
+            //window.open('', '_self', '');
+            self.opener = self;
             window.close();
         }
 
