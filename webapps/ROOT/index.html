@@ -127,6 +127,12 @@
         function goShowUseReportModal() {
             $('#consultingModal').modal('show');
             $("#consulting_report")[0].reset();
+            $('#backToTop').hide();
+        }
+
+        function goHideUseReportModal() {
+            $('#consultingModal').modal('hide');
+            $("#consulting_report")[0].reset();
             $('#backToTop').fadeIn(500);
         }
 
@@ -342,7 +348,7 @@
 
                 <div class="modal-footer">
                     <button type="button" name="button" class="btn btn-primary" onclick="consultingReportConnection()">보내기</button>
-                    <button type="button" name="button" class="btn btn-primary" data-dismiss="modal">닫기</button>
+                    <button type="button" name="button" class="btn btn-primary" onclick="goHideUseReportModal()">닫기</button>
                     <!--<button type="button" name="button" class="btn btn-primary" onclick="return self.close();">닫기</button>-->
                 </div>
 
