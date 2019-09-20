@@ -266,6 +266,11 @@
         //getCookieMobile();
         //deleteCookie();
 
+        function chatbotClose() {
+            window.open('', '_self', '');
+            window.close();
+        }
+
     </script>
     <title>한진택배 인공지능 챗봇</title>
 </head>
@@ -305,7 +310,7 @@
 
                 <div class="modal-header">
                     <div class="reportTitle">
-                        <h3><img src="assets/image/chatbotStyle/new/logo1_1.png" width="50" /> &nbsp;챗봇 상담 만족도 평가하기</h3>
+                        <h3><img src="assets/image/chatbotStyle/new/icon_new.png" width="50" /> &nbsp;챗봇 상담 만족도 평가하기</h3>
                     </div>
                 </div>
 
@@ -348,7 +353,7 @@
 
                 <div class="modal-header">
                     <div class="reportTitle">
-                        <h3><img src="assets/image/chatbotStyle/new/logo1_1.png" width="50" /> &nbsp;챗봇 상담 만족도 평가하기</h3>
+                        <h3><img src="assets/image/chatbotStyle/new/icon_new.png" width="50" /> &nbsp;챗봇 상담 만족도 평가하기</h3>
                     </div>
                 </div>
                 <div class="modal-body">
@@ -356,7 +361,7 @@
                 </div>
                 <div class="modal-footer">
                     <!--<button type="button" name="button" class="btn btn-color2" data-dismiss="modal">닫기</button>-->
-                    <button type="button" name="button" class="btn btn-color2" onclick="self.close();">닫기</button>
+                    <button type="button" name="button" class="btn btn-primary" onclick="chatbotClose();">닫기</button>
                 </div>
 
             </div>
